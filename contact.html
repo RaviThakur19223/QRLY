@@ -1,0 +1,1519 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Contact — QRLY</title>
+    <link rel="icon" type="image/svg+xml" href="./assets/qrly.svg" />
+
+    <meta
+      name="description"
+      content="Get in touch with QRLY. Have a question, suggestion, or feedback? We'd love to hear from you."
+    />
+
+    <meta name="theme-color" content="#080a0f" />
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Font Awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    />
+
+    <!-- Main Styles -->
+    <link rel="stylesheet" href="css/style.css" />
+
+    <style>
+      /* =========================================================
+           CONTACT PAGE
+           ========================================================= */
+
+      .contact-page {
+        padding: 165px 0 100px;
+      }
+
+      /* =========================================================
+           HERO
+           ========================================================= */
+
+      .contact-hero {
+        text-align: center;
+        max-width: 760px;
+        margin: 0 auto 65px;
+      }
+
+      .contact-eyebrow {
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        padding: 7px 12px;
+        border: 1px solid var(--border);
+        border-radius: 999px;
+        background: rgba(255, 255, 255, 0.025);
+        color: var(--text-soft);
+        font-size: 12px;
+        font-weight: 600;
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+        margin-bottom: 22px;
+      }
+
+      .contact-eyebrow i {
+        color: var(--accent-light);
+        font-size: 11px;
+      }
+
+      .contact-hero h1 {
+        font-family: "Space Grotesk", sans-serif;
+        font-size: clamp(2.7rem, 6vw, 5rem);
+        line-height: 1;
+        letter-spacing: -0.055em;
+        margin-bottom: 20px;
+      }
+
+      .contact-hero h1 span {
+        color: var(--accent-light);
+      }
+
+      .contact-hero p {
+        max-width: 620px;
+        margin: 0 auto;
+        color: var(--text-soft);
+        font-size: 17px;
+        line-height: 1.75;
+      }
+
+      /* =========================================================
+           CONTACT GRID
+           ========================================================= */
+
+      .contact-grid {
+        display: grid;
+        grid-template-columns: 0.85fr 1.15fr;
+        gap: 24px;
+        align-items: stretch;
+      }
+
+      /* =========================================================
+           LEFT SIDE
+           ========================================================= */
+
+      .contact-info {
+        display: flex;
+        flex-direction: column;
+        gap: 18px;
+      }
+
+      .contact-info-card {
+        position: relative;
+        padding: 27px;
+        border: 1px solid var(--border);
+        border-radius: var(--radius-lg);
+        background: linear-gradient(
+          145deg,
+          rgba(255, 255, 255, 0.035),
+          rgba(255, 255, 255, 0.012)
+        );
+        overflow: hidden;
+        transition:
+          transform 0.3s ease,
+          border-color 0.3s ease,
+          background 0.3s ease;
+      }
+
+      .contact-info-card::before {
+        content: "";
+        position: absolute;
+        width: 150px;
+        height: 150px;
+        right: -75px;
+        top: -75px;
+        border-radius: 50%;
+        background: var(--accent-soft);
+        filter: blur(10px);
+        pointer-events: none;
+      }
+
+      .contact-info-card:hover {
+        transform: translateY(-4px);
+        border-color: var(--border-light);
+        background: linear-gradient(
+          145deg,
+          rgba(255, 255, 255, 0.05),
+          rgba(255, 255, 255, 0.018)
+        );
+      }
+
+      .contact-icon {
+        width: 46px;
+        height: 46px;
+        display: grid;
+        place-items: center;
+        border-radius: 13px;
+        background: var(--accent-soft);
+        border: 1px solid rgba(124, 92, 255, 0.2);
+        color: var(--accent-light);
+        font-size: 17px;
+        margin-bottom: 20px;
+      }
+
+      .contact-info-card h3 {
+        font-family: "Space Grotesk", sans-serif;
+        font-size: 19px;
+        margin-bottom: 8px;
+      }
+
+      .contact-info-card p {
+        color: var(--text-soft);
+        font-size: 14px;
+        line-height: 1.7;
+        margin: 0;
+      }
+
+      .contact-info-card strong {
+        display: block;
+        margin-top: 13px;
+        color: var(--text);
+        font-size: 14px;
+        font-weight: 600;
+      }
+
+      /* =========================================================
+           QUICK LINKS
+           ========================================================= */
+
+      .contact-quick {
+        padding: 27px;
+        border: 1px solid var(--border);
+        border-radius: var(--radius-lg);
+        background: var(--surface);
+      }
+
+      .contact-quick h3 {
+        font-family: "Space Grotesk", sans-serif;
+        font-size: 18px;
+        margin-bottom: 18px;
+      }
+
+      .quick-link {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 15px;
+        padding: 13px 0;
+        border-bottom: 1px solid var(--border);
+        color: var(--text-soft);
+        font-size: 14px;
+      }
+
+      .quick-link:last-child {
+        border-bottom: 0;
+        padding-bottom: 0;
+      }
+
+      .quick-link:first-of-type {
+        padding-top: 0;
+      }
+
+      .quick-link-left {
+        display: flex;
+        align-items: center;
+        gap: 11px;
+      }
+
+      .quick-link-left i {
+        width: 27px;
+        color: var(--accent-light);
+        text-align: center;
+      }
+
+      .quick-link a {
+        color: var(--text);
+        transition: color 0.2s ease;
+      }
+
+      .quick-link a:hover {
+        color: var(--accent-light);
+      }
+
+      /* =========================================================
+           FORM
+           ========================================================= */
+
+      .contact-form-card {
+        padding: 34px;
+        border: 1px solid var(--border);
+        border-radius: var(--radius-lg);
+        background: linear-gradient(
+          145deg,
+          rgba(17, 21, 29, 0.98),
+          rgba(13, 16, 23, 0.98)
+        );
+        box-shadow: 0 25px 70px rgba(0, 0, 0, 0.2);
+      }
+
+      .form-header {
+        margin-bottom: 28px;
+      }
+
+      .form-header span {
+        display: block;
+        color: var(--accent-light);
+        font-size: 11px;
+        font-weight: 700;
+        letter-spacing: 0.1em;
+        text-transform: uppercase;
+        margin-bottom: 8px;
+      }
+
+      .form-header h2 {
+        font-family: "Space Grotesk", sans-serif;
+        font-size: 26px;
+        letter-spacing: -0.025em;
+        margin-bottom: 8px;
+      }
+
+      .form-header p {
+        color: var(--text-soft);
+        font-size: 14px;
+        line-height: 1.65;
+        margin: 0;
+      }
+
+      .contact-form {
+        display: flex;
+        flex-direction: column;
+        gap: 17px;
+      }
+
+      .form-row {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 15px;
+      }
+
+      .form-group {
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+      }
+
+      .form-group label {
+        color: var(--text);
+        font-size: 13px;
+        font-weight: 600;
+      }
+
+      .form-group label span {
+        color: var(--accent-light);
+      }
+
+      .form-group input,
+      .form-group textarea {
+        width: 100%;
+        border: 1px solid var(--border);
+        border-radius: 12px;
+        background: rgba(255, 255, 255, 0.025);
+        color: var(--text);
+        font-family: "DM Sans", sans-serif;
+        font-size: 14px;
+        outline: none;
+        transition:
+          border-color 0.2s ease,
+          background 0.2s ease,
+          box-shadow 0.2s ease;
+      }
+
+      .form-group input {
+        min-height: 46px;
+        padding: 12px 14px;
+      }
+
+      .form-group textarea {
+        min-height: 145px;
+        padding: 13px 14px;
+        line-height: 1.6;
+        resize: none !important;
+        overflow-y: auto;
+      }
+
+      .form-group input::placeholder,
+      .form-group textarea::placeholder {
+        color: var(--text-muted);
+      }
+
+      .form-group input:focus,
+      .form-group textarea:focus {
+        border-color: rgba(124, 92, 255, 0.65);
+        background: rgba(124, 92, 255, 0.035);
+        box-shadow: 0 0 0 3px rgba(124, 92, 255, 0.09);
+      }
+
+      .form-group textarea {
+        scrollbar-width: thin;
+      }
+
+      .message-meta {
+        display: flex;
+        justify-content: flex-end;
+        margin-top: -2px;
+      }
+
+      .message-count {
+        color: var(--text-muted);
+        font-size: 11px;
+      }
+
+      .form-error {
+        display: none;
+        color: #ff8d9b;
+        font-size: 11px;
+        margin-top: -3px;
+      }
+
+      .form-group.invalid input,
+      .form-group.invalid textarea {
+        border-color: rgba(255, 90, 110, 0.55);
+      }
+
+      .form-group.invalid .form-error {
+        display: block;
+      }
+
+      .submit-button {
+        position: relative;
+        width: 100%;
+        min-height: 50px;
+        margin-top: 4px;
+        border: 0;
+        border-radius: 12px;
+        background: var(--accent);
+        color: var(--white);
+        font-family: "DM Sans", sans-serif;
+        font-size: 14px;
+        font-weight: 700;
+        cursor: pointer;
+        transition:
+          transform 0.2s ease,
+          background 0.2s ease,
+          box-shadow 0.2s ease;
+      }
+
+      .submit-button:hover {
+        transform: translateY(-2px);
+        background: var(--accent-light);
+        box-shadow: 0 12px 30px rgba(124, 92, 255, 0.22);
+      }
+
+      .submit-button:active {
+        transform: translateY(0);
+      }
+
+      .submit-button i {
+        margin-left: 7px;
+        font-size: 12px;
+      }
+
+      .form-note {
+        text-align: center;
+        color: var(--text-muted);
+        font-size: 11px;
+        line-height: 1.5;
+        margin-top: 1px;
+      }
+
+      /* =========================================================
+           SUCCESS MESSAGE
+           ========================================================= */
+
+      .form-success {
+        display: none;
+        text-align: center;
+        padding: 45px 25px;
+      }
+
+      .form-success.show {
+        display: block;
+        animation: successFade 0.4s ease forwards;
+      }
+
+      @keyframes successFade {
+        from {
+          opacity: 0;
+          transform: translateY(8px);
+        }
+
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+
+      .success-icon {
+        width: 65px;
+        height: 65px;
+        display: grid;
+        place-items: center;
+        margin: 0 auto 20px;
+        border-radius: 50%;
+        background: var(--accent-soft);
+        border: 1px solid rgba(124, 92, 255, 0.25);
+        color: var(--accent-light);
+        font-size: 23px;
+      }
+
+      .form-success h3 {
+        font-family: "Space Grotesk", sans-serif;
+        font-size: 25px;
+        margin-bottom: 10px;
+      }
+
+      .form-success p {
+        max-width: 430px;
+        margin: 0 auto;
+        color: var(--text-soft);
+        font-size: 14px;
+        line-height: 1.7;
+      }
+
+      .send-another {
+        margin-top: 22px;
+        border: 1px solid var(--border-light);
+        border-radius: 10px;
+        padding: 10px 16px;
+        background: transparent;
+        color: var(--text);
+        font-family: inherit;
+        font-size: 13px;
+        font-weight: 600;
+        cursor: pointer;
+        transition: all 0.2s ease;
+      }
+
+      .send-another:hover {
+        border-color: var(--accent);
+        color: var(--accent-light);
+      }
+
+      /* =========================================================
+           FAQ
+           ========================================================= */
+
+      .contact-faq {
+        max-width: 850px;
+        margin: 110px auto 0;
+      }
+
+      .faq-heading {
+        text-align: center;
+        margin-bottom: 35px;
+      }
+
+      .faq-heading span {
+        display: block;
+        color: var(--accent-light);
+        font-size: 11px;
+        font-weight: 700;
+        letter-spacing: 0.1em;
+        text-transform: uppercase;
+        margin-bottom: 10px;
+      }
+
+      .faq-heading h2 {
+        font-family: "Space Grotesk", sans-serif;
+        font-size: clamp(2rem, 4vw, 2.8rem);
+        letter-spacing: -0.04em;
+        margin-bottom: 10px;
+      }
+
+      .faq-heading p {
+        color: var(--text-soft);
+        font-size: 14px;
+        line-height: 1.7;
+      }
+
+      .faq-list {
+        display: grid;
+        gap: 12px;
+      }
+
+      .faq-item {
+        border: 1px solid var(--border);
+        border-radius: 15px;
+        background: rgba(255, 255, 255, 0.018);
+        overflow: hidden;
+      }
+
+      .faq-question {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 20px;
+        padding: 19px 20px;
+        border: 0;
+        background: transparent;
+        color: var(--text);
+        font-family: "DM Sans", sans-serif;
+        font-size: 14px;
+        font-weight: 600;
+        text-align: left;
+        cursor: pointer;
+      }
+
+      .faq-question i {
+        color: var(--text-muted);
+        font-size: 12px;
+        transition: transform 0.25s ease;
+      }
+
+      .faq-item.open .faq-question i {
+        transform: rotate(180deg);
+        color: var(--accent-light);
+      }
+
+      .faq-answer {
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.3s ease;
+      }
+
+      .faq-answer p {
+        padding: 0 20px 19px;
+        color: var(--text-soft);
+        font-size: 13px;
+        line-height: 1.75;
+        margin: 0;
+      }
+
+      /* =========================================================
+           CTA
+           ========================================================= */
+
+      .contact-cta {
+        position: relative;
+        margin-top: 100px;
+        padding: 65px 35px;
+        text-align: center;
+        border: 1px solid var(--border);
+        border-radius: 26px;
+        background:
+          radial-gradient(
+            circle at 50% 0%,
+            rgba(124, 92, 255, 0.16),
+            transparent 55%
+          ),
+          var(--surface);
+        overflow: hidden;
+      }
+
+      .contact-cta::before,
+      .contact-cta::after {
+        content: "";
+        position: absolute;
+        border-radius: 50%;
+        pointer-events: none;
+      }
+
+      .contact-cta::before {
+        width: 180px;
+        height: 180px;
+        left: -90px;
+        bottom: -100px;
+        background: rgba(124, 92, 255, 0.08);
+        filter: blur(12px);
+      }
+
+      .contact-cta::after {
+        width: 160px;
+        height: 160px;
+        right: -80px;
+        top: -90px;
+        background: rgba(154, 131, 255, 0.06);
+        filter: blur(10px);
+      }
+
+      .contact-cta h2 {
+        position: relative;
+        z-index: 1;
+        font-family: "Space Grotesk", sans-serif;
+        font-size: clamp(2rem, 4vw, 3rem);
+        letter-spacing: -0.045em;
+        margin-bottom: 13px;
+      }
+
+      .contact-cta p {
+        position: relative;
+        z-index: 1;
+        max-width: 570px;
+        margin: 0 auto 25px;
+        color: var(--text-soft);
+        font-size: 14px;
+        line-height: 1.7;
+      }
+
+      .contact-cta a {
+        position: relative;
+        z-index: 1;
+        display: inline-flex;
+        align-items: center;
+        gap: 9px;
+        padding: 12px 18px;
+        border-radius: 11px;
+        background: var(--accent);
+        color: var(--white);
+        font-size: 13px;
+        font-weight: 700;
+        transition: all 0.2s ease;
+      }
+
+      .contact-cta a:hover {
+        transform: translateY(-2px);
+        background: var(--accent-light);
+        box-shadow: 0 12px 30px rgba(124, 92, 255, 0.2);
+      }
+
+      /* =========================================================
+           RESPONSIVE
+           ========================================================= */
+
+      @media (max-width: 900px) {
+        .contact-page {
+          padding-top: 140px;
+        }
+
+        .contact-grid {
+          grid-template-columns: 1fr;
+        }
+
+        .contact-info {
+          display: grid;
+          grid-template-columns: 1fr 1fr;
+        }
+
+        .contact-quick {
+          grid-column: 1 / -1;
+        }
+      }
+
+      @media (max-width: 650px) {
+        .contact-page {
+          padding: 110px 0 60px;
+        }
+
+        .contact-hero {
+          margin-bottom: 40px;
+        }
+
+        .contact-hero h1 {
+          font-size: clamp(2.35rem, 12vw, 3.4rem);
+        }
+
+        .contact-hero p {
+          font-size: 14px;
+        }
+
+        .contact-info {
+          grid-template-columns: 1fr;
+        }
+
+        .contact-quick {
+          grid-column: auto;
+        }
+
+        .contact-info-card,
+        .contact-quick,
+        .contact-form-card {
+          padding: 21px;
+        }
+
+        .form-row {
+          grid-template-columns: 1fr;
+        }
+
+        .contact-faq {
+          margin-top: 75px;
+        }
+
+        .contact-cta {
+          margin-top: 75px;
+          padding: 48px 20px;
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <!-- =========================================================
+         HEADER
+         ========================================================= -->
+
+    <header class="site-header">
+      <nav class="navbar container">
+        <a href="index.html" class="brand">
+          <span class="brand-mark">
+            <span></span>
+            <span></span>
+            <span></span>
+          </span>
+
+          <span class="brand-name">QRLY</span>
+        </a>
+
+        <button
+          class="mobile-menu-toggle"
+          id="mobileMenuToggle"
+          aria-label="Toggle navigation"
+          aria-expanded="false"
+        >
+          <i class="fa-solid fa-bars"></i>
+        </button>
+
+        <div class="nav-links" id="navLinks">
+          <a href="index.html">Home</a>
+
+          <a href="generator.html">Generator</a>
+
+          <a href="features.html">Features</a>
+
+          <a href="about.html">About</a>
+
+          <a href="contact.html" class="active">Contact</a>
+
+          <a href="generator.html" class="nav-cta">
+            Create QR
+            <i class="fa-solid fa-arrow-up-right-from-square"></i>
+          </a>
+        </div>
+      </nav>
+    </header>
+
+    <!-- =========================================================
+         MAIN
+         ========================================================= -->
+
+    <main class="contact-page">
+      <div class="container">
+        <!-- HERO -->
+
+        <section class="contact-hero reveal">
+          <div class="contact-eyebrow">
+            <i class="fa-solid fa-message"></i>
+            Get in touch
+          </div>
+
+          <h1>
+            We'd love to
+            <span>hear from you.</span>
+          </h1>
+
+          <p>
+            Have a question, found something we can improve, or simply want to
+            say hello? Send us a message. We’re always listening.
+          </p>
+        </section>
+
+        <!-- CONTACT WORKSPACE -->
+
+        <section class="contact-grid reveal">
+          <!-- LEFT -->
+
+          <div class="contact-info">
+            <div class="contact-info-card">
+              <div class="contact-icon">
+                <i class="fa-solid fa-circle-question"></i>
+              </div>
+
+              <h3>Need help?</h3>
+
+              <p>
+                Having trouble creating or customizing a QR code? Tell us what
+                happened and we'll help you figure it out.
+              </p>
+
+              <strong> Support & troubleshooting </strong>
+            </div>
+
+            <div class="contact-info-card">
+              <div class="contact-icon">
+                <i class="fa-solid fa-lightbulb"></i>
+              </div>
+
+              <h3>Have an idea?</h3>
+
+              <p>
+                Good products get better through good feedback. Share a feature
+                idea or improvement you'd like to see.
+              </p>
+
+              <strong> Suggestions & feedback </strong>
+            </div>
+
+            <div class="contact-quick">
+              <h3>Quick answers</h3>
+
+              <div class="quick-link">
+                <div class="quick-link-left">
+                  <i class="fa-solid fa-qrcode"></i>
+                  <span>Want to create a QR?</span>
+                </div>
+
+                <a href="generator.html"> Open Generator </a>
+              </div>
+
+              <div class="quick-link">
+                <div class="quick-link-left">
+                  <i class="fa-solid fa-wand-magic-sparkles"></i>
+                  <span>See what QRLY offers</span>
+                </div>
+
+                <a href="features.html"> Features </a>
+              </div>
+
+              <div class="quick-link">
+                <div class="quick-link-left">
+                  <i class="fa-solid fa-circle-info"></i>
+                  <span>Learn about QRLY</span>
+                </div>
+
+                <a href="about.html"> About </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- FORM -->
+
+          <div class="contact-form-card">
+            <div class="form-header">
+              <span>Send a message</span>
+
+              <h2>How can we help?</h2>
+
+              <p>
+                Fill out the form below with a little information and we'll have
+                a better idea of how to help.
+              </p>
+            </div>
+
+            <!-- FORM -->
+
+            <form
+              class="contact-form"
+              id="contactForm"
+              action="https://formspree.io/f/xvkolqor"
+              method="POST"
+            >
+              <div class="form-row">
+                <div class="form-group">
+                  <label for="name"> Name <span>*</span> </label>
+
+                  <input
+                    type="text"
+                    id="name"
+                    name="name"
+                    placeholder="Your name"
+                    autocomplete="name"
+                    required
+                  />
+
+                  <span class="form-error"> Please enter your name. </span>
+                </div>
+
+                <div class="form-group">
+                  <label for="email"> Email <span>*</span> </label>
+
+                  <input
+                    type="email"
+                    id="email"
+                    name="email"
+                    placeholder="you@example.com"
+                    autocomplete="email"
+                    required
+                  />
+
+                  <span class="form-error"> Please enter a valid email. </span>
+                </div>
+              </div>
+
+              <div class="form-group">
+                <label for="subject"> Subject <span>*</span> </label>
+
+                <input
+                  type="text"
+                  id="subject"
+                  name="subject"
+                  placeholder="What is this about?"
+                  required
+                />
+
+                <span class="form-error"> Please enter a subject. </span>
+              </div>
+
+              <div class="form-group">
+                <label for="message"> Message <span>*</span> </label>
+
+                <textarea
+                  id="message"
+                  name="message"
+                  placeholder="Tell us what's on your mind..."
+                  maxlength="1000"
+                  required
+                ></textarea>
+
+                <div class="message-meta">
+                  <span class="message-count">
+                    <span id="messageCount">0</span>/1000
+                  </span>
+                </div>
+
+                <span class="form-error"> Please enter your message. </span>
+              </div>
+
+              <button type="submit" class="submit-button">
+                Send Message
+                <i class="fa-solid fa-arrow-right"></i>
+              </button>
+
+              <p class="privacy-note">
+                Your message is securely processed through our form service and
+                is only used to respond to your inquiry.
+              </p>
+            </form>
+
+            <!-- SUCCESS STATE -->
+
+            <div class="form-success" id="formSuccess">
+              <div class="success-icon">
+                <i class="fa-solid fa-check"></i>
+              </div>
+
+              <h3>Message received.</h3>
+
+              <p>
+                Thanks for reaching out. Your message has passed validation
+                successfully. The contact backend can be connected when QRLY is
+                ready for production.
+              </p>
+
+              <button type="button" class="send-another" id="sendAnother">
+                Send another message
+              </button>
+            </div>
+          </div>
+        </section>
+
+        <!-- =====================================================
+                 FAQ
+                 ===================================================== -->
+
+        <section class="contact-faq reveal">
+          <div class="faq-heading">
+            <span>Before you write</span>
+
+            <h2>Maybe we've answered it already.</h2>
+
+            <p>A few quick answers to common questions.</p>
+          </div>
+
+          <div class="faq-list">
+            <div class="faq-item">
+              <button class="faq-question" type="button">
+                <span> Is QRLY free to use? </span>
+
+                <i class="fa-solid fa-chevron-down"></i>
+              </button>
+
+              <div class="faq-answer">
+                <p>
+                  Yes. QRLY is designed to make creating QR codes simple and
+                  accessible without unnecessary barriers.
+                </p>
+              </div>
+            </div>
+
+            <div class="faq-item">
+              <button class="faq-question" type="button">
+                <span> Do I need to create an account? </span>
+
+                <i class="fa-solid fa-chevron-down"></i>
+              </button>
+
+              <div class="faq-answer">
+                <p>
+                  No account is required to use the QR generator. You can create
+                  and customize your QR code directly in your browser.
+                </p>
+              </div>
+            </div>
+
+            <div class="faq-item">
+              <button class="faq-question" type="button">
+                <span> Does QRLY upload my QR data? </span>
+
+                <i class="fa-solid fa-chevron-down"></i>
+              </button>
+
+              <div class="faq-answer">
+                <p>
+                  QRLY's generator is designed to work directly in your browser,
+                  keeping the generation process simple and privacy-minded.
+                </p>
+              </div>
+            </div>
+
+            <div class="faq-item">
+              <button class="faq-question" type="button">
+                <span> Can I suggest a new QR format? </span>
+
+                <i class="fa-solid fa-chevron-down"></i>
+              </button>
+
+              <div class="faq-answer">
+                <p>
+                  Absolutely. Feature suggestions are welcome. Use the contact
+                  form above and tell us what you'd like QRLY to support.
+                </p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- =====================================================
+                 CTA
+                 ===================================================== -->
+
+        <section class="contact-cta reveal">
+          <h2>Ready to create?</h2>
+
+          <p>
+            Skip the conversation and make your next QR code. It's fast,
+            customizable, and works right in your browser.
+          </p>
+
+          <a href="generator.html">
+            Open QR Generator
+            <i class="fa-solid fa-arrow-right"></i>
+          </a>
+        </section>
+      </div>
+    </main>
+
+    <!-- =========================================================
+         FOOTER
+         ========================================================= -->
+
+    <footer class="site-footer">
+      <div class="container">
+        <div class="footer-main">
+          <div class="footer-brand">
+            <a href="index.html" class="brand">
+              <span class="brand-mark">
+                <span></span>
+                <span></span>
+                <span></span>
+              </span>
+
+              <span class="brand-name">QRLY</span>
+            </a>
+
+            <p>Create. Customize. Connect.</p>
+
+            <span class="footer-location"> Built for the web · 2026 </span>
+          </div>
+
+          <div class="footer-links-group">
+            <div class="footer-column">
+              <h4>Product</h4>
+
+              <a href="generator.html"> Generator </a>
+
+              <a href="features.html"> Features </a>
+
+              <a href="about.html"> About </a>
+            </div>
+
+            <div class="footer-column">
+              <h4>Company</h4>
+
+              <a href="contact.html"> Contact </a>
+
+              <a href="privacy.html"> Privacy </a>
+
+              <a href="terms.html"> Terms </a>
+            </div>
+          </div>
+        </div>
+
+        <div class="footer-bottom">
+          <span> © 2026 QRLY. All rights reserved. </span>
+
+          <span> Crafted with precision. </span>
+        </div>
+      </div>
+    </footer>
+
+    <!-- =========================================================
+         JAVASCRIPT
+         ========================================================= -->
+
+    <script>
+      /* =========================================================
+     MOBILE NAVIGATION
+     ========================================================= */
+
+      const mobileMenuToggle = document.getElementById("mobileMenuToggle");
+      const navLinks = document.getElementById("navLinks");
+
+      if (mobileMenuToggle && navLinks) {
+        mobileMenuToggle.addEventListener("click", () => {
+          const isOpen = navLinks.classList.toggle("open");
+
+          mobileMenuToggle.setAttribute("aria-expanded", isOpen);
+
+          mobileMenuToggle.innerHTML = isOpen
+            ? '<i class="fa-solid fa-xmark"></i>'
+            : '<i class="fa-solid fa-bars"></i>';
+        });
+
+        document.querySelectorAll(".nav-links a").forEach((link) => {
+          link.addEventListener("click", () => {
+            navLinks.classList.remove("open");
+
+            mobileMenuToggle.setAttribute("aria-expanded", "false");
+
+            mobileMenuToggle.innerHTML = '<i class="fa-solid fa-bars"></i>';
+          });
+        });
+      }
+
+      /* =========================================================
+     SCROLL REVEAL
+     ========================================================= */
+
+      const revealElements = document.querySelectorAll(".reveal");
+
+      if ("IntersectionObserver" in window) {
+        const revealObserver = new IntersectionObserver(
+          (entries, observer) => {
+            entries.forEach((entry) => {
+              if (entry.isIntersecting) {
+                entry.target.classList.add("visible");
+                observer.unobserve(entry.target);
+              }
+            });
+          },
+          {
+            threshold: 0.12,
+          },
+        );
+
+        revealElements.forEach((element) => {
+          revealObserver.observe(element);
+        });
+      } else {
+        revealElements.forEach((element) => {
+          element.classList.add("visible");
+        });
+      }
+
+      /* =========================================================
+     CONTACT FORM
+     ========================================================= */
+
+      const contactForm = document.getElementById("contactForm");
+      const formSuccess = document.getElementById("formSuccess");
+      const sendAnother = document.getElementById("sendAnother");
+
+      const message = document.getElementById("message");
+      const messageCount =
+        document.getElementById("messageCount") ||
+        document.getElementById("messageCounter");
+
+      /* =========================================================
+     MESSAGE COUNTER
+     ========================================================= */
+
+      if (message && messageCount) {
+        const updateMessageCount = () => {
+          messageCount.textContent = message.value.length;
+        };
+
+        message.addEventListener("input", updateMessageCount);
+
+        updateMessageCount();
+      }
+
+      /* =========================================================
+     FORM SUBMISSION
+     ========================================================= */
+
+      if (contactForm) {
+        contactForm.addEventListener("submit", async (event) => {
+          event.preventDefault();
+
+          const name = document.getElementById("name");
+          const email = document.getElementById("email");
+          const subject = document.getElementById("subject");
+
+          const submitButton = contactForm.querySelector(
+            'button[type="submit"]',
+          );
+
+          let isValid = true;
+
+          /* ---------------------------------------------------------
+         REMOVE OLD ERRORS
+         --------------------------------------------------------- */
+
+          contactForm.querySelectorAll(".form-group").forEach((group) => {
+            group.classList.remove("invalid");
+          });
+
+          /* ---------------------------------------------------------
+         NAME VALIDATION
+         --------------------------------------------------------- */
+
+          if (!name || !name.value.trim()) {
+            if (name) {
+              name.closest(".form-group")?.classList.add("invalid");
+            }
+
+            isValid = false;
+          }
+
+          /* ---------------------------------------------------------
+         EMAIL VALIDATION
+         --------------------------------------------------------- */
+
+          const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+          if (
+            !email ||
+            !email.value.trim() ||
+            !emailPattern.test(email.value.trim())
+          ) {
+            if (email) {
+              email.closest(".form-group")?.classList.add("invalid");
+            }
+
+            isValid = false;
+          }
+
+          /* ---------------------------------------------------------
+         SUBJECT VALIDATION
+         --------------------------------------------------------- */
+
+          if (!subject || !subject.value.trim()) {
+            if (subject) {
+              subject.closest(".form-group")?.classList.add("invalid");
+            }
+
+            isValid = false;
+          }
+
+          /* ---------------------------------------------------------
+         MESSAGE VALIDATION
+         --------------------------------------------------------- */
+
+          if (!message || !message.value.trim()) {
+            if (message) {
+              message.closest(".form-group")?.classList.add("invalid");
+            }
+
+            isValid = false;
+          }
+
+          /* ---------------------------------------------------------
+         FOCUS FIRST INVALID FIELD
+         --------------------------------------------------------- */
+
+          if (!isValid) {
+            const firstInvalid = contactForm.querySelector(
+              ".form-group.invalid input, .form-group.invalid textarea",
+            );
+
+            if (firstInvalid) {
+              firstInvalid.focus();
+            }
+
+            return;
+          }
+
+          /* ---------------------------------------------------------
+         SENDING STATE
+         --------------------------------------------------------- */
+
+          const originalButtonHTML = submitButton ? submitButton.innerHTML : "";
+
+          if (submitButton) {
+            submitButton.disabled = true;
+
+            submitButton.innerHTML = `
+          <i class="fa-solid fa-spinner fa-spin"></i>
+          Sending...
+        `;
+          }
+
+          /* ---------------------------------------------------------
+         SEND TO FORMSPREE
+         --------------------------------------------------------- */
+
+          try {
+            const formData = new FormData(contactForm);
+
+            const response = await fetch(contactForm.action, {
+              method: "POST",
+              body: formData,
+              headers: {
+                Accept: "application/json",
+              },
+            });
+
+            /* -------------------------------------------------------
+           SUCCESS
+           ------------------------------------------------------- */
+
+            if (response.ok) {
+              contactForm.reset();
+
+              if (messageCount) {
+                messageCount.textContent = "0";
+              }
+
+              contactForm.style.display = "none";
+
+              if (formSuccess) {
+                formSuccess.classList.add("show");
+              }
+
+              return;
+            }
+
+            /* -------------------------------------------------------
+           FORMSPREE ERROR
+           ------------------------------------------------------- */
+
+            let errorMessage =
+              "Something went wrong while sending your message.";
+
+            try {
+              const data = await response.json();
+
+              if (data?.errors?.length) {
+                errorMessage = data.errors
+                  .map((error) => error.message)
+                  .join("\n");
+              }
+            } catch (error) {
+              /* Ignore JSON parsing error */
+            }
+
+            throw new Error(errorMessage);
+          } catch (error) {
+            console.error("Contact form error:", error);
+
+            if (submitButton) {
+              submitButton.disabled = false;
+              submitButton.innerHTML = originalButtonHTML;
+            }
+
+            alert(
+              error.message ||
+                "Something went wrong while sending your message. Please try again.",
+            );
+          }
+        });
+      }
+
+      /* =========================================================
+     SEND ANOTHER MESSAGE
+     ========================================================= */
+
+      if (sendAnother) {
+        sendAnother.addEventListener("click", () => {
+          if (contactForm) {
+            contactForm.reset();
+
+            contactForm.querySelectorAll(".form-group").forEach((group) => {
+              group.classList.remove("invalid");
+            });
+
+            contactForm.style.display = "flex";
+          }
+
+          if (messageCount) {
+            messageCount.textContent = "0";
+          }
+
+          if (formSuccess) {
+            formSuccess.classList.remove("show");
+          }
+        });
+      }
+
+      /* =========================================================
+     FAQ ACCORDION
+     ========================================================= */
+
+      document.querySelectorAll(".faq-question").forEach((question) => {
+        question.addEventListener("click", () => {
+          const item = question.closest(".faq-item");
+          const answer = item?.querySelector(".faq-answer");
+
+          if (!item || !answer) {
+            return;
+          }
+
+          const isOpen = item.classList.contains("open");
+
+          /* -------------------------------------------------------
+         CLOSE OTHER FAQs
+         ------------------------------------------------------- */
+
+          document.querySelectorAll(".faq-item.open").forEach((openItem) => {
+            if (openItem !== item) {
+              openItem.classList.remove("open");
+
+              const openAnswer = openItem.querySelector(".faq-answer");
+
+              if (openAnswer) {
+                openAnswer.style.maxHeight = null;
+              }
+            }
+          });
+
+          /* -------------------------------------------------------
+         TOGGLE CURRENT FAQ
+         ------------------------------------------------------- */
+
+          if (isOpen) {
+            item.classList.remove("open");
+
+            answer.style.maxHeight = null;
+          } else {
+            item.classList.add("open");
+
+            answer.style.maxHeight = answer.scrollHeight + "px";
+          }
+        });
+      });
+
+      /* =========================================================
+     PREVENT TEXTAREA RESIZING
+     ========================================================= */
+
+      document.querySelectorAll("textarea").forEach((textarea) => {
+        textarea.style.resize = "none";
+        textarea.style.overflowY = "auto";
+      });
+    </script>
+  </body>
+</html>

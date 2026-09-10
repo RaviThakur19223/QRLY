@@ -1,0 +1,1173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Features — QRLY | Create. Customize. Connect.</title>
+    <meta name="description" content="Explore QRLY's powerful QR code features. Create QR codes for URLs, text, email, phone, Wi-Fi and contact cards with easy customization and downloads.">
+    <meta name="theme-color" content="#080a0f">
+
+    <link rel="icon" type="image/svg+xml" href="./assets/qrly.svg">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+    <!-- Main CSS -->
+    <link rel="stylesheet" href="css/style.css">
+
+    <style>
+        /* =========================================================
+           QRLY FEATURES PAGE
+           ========================================================= */
+
+        .features-page {
+            padding-top: 150px;
+            padding-bottom: 100px;
+        }
+
+        .features-hero {
+            text-align: center;
+            max-width: 780px;
+            margin: 0 auto 90px;
+        }
+
+        .features-hero .eyebrow {
+            margin-bottom: 18px;
+        }
+
+        .features-hero h1 {
+            font-size: clamp(3rem, 7vw, 5.4rem);
+            line-height: 0.98;
+            letter-spacing: -0.055em;
+            margin-bottom: 24px;
+        }
+
+        .features-hero h1 span {
+            color: var(--accent-light);
+        }
+
+        .features-hero p {
+            max-width: 650px;
+            margin: 0 auto;
+            font-size: 17px;
+            line-height: 1.75;
+            color: var(--text-soft);
+        }
+
+        /* Feature cards */
+
+        .feature-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 18px;
+        }
+
+        .feature-card {
+            position: relative;
+            padding: 30px;
+            min-height: 260px;
+            border: 1px solid var(--border);
+            border-radius: var(--radius-lg);
+            background:
+                linear-gradient(
+                    145deg,
+                    rgba(255,255,255,0.035),
+                    rgba(255,255,255,0.012)
+                ),
+                var(--surface);
+            overflow: hidden;
+            transition:
+                transform 0.35s ease,
+                border-color 0.35s ease,
+                background 0.35s ease;
+        }
+
+        .feature-card::before {
+            content: "";
+            position: absolute;
+            width: 160px;
+            height: 160px;
+            top: -90px;
+            right: -80px;
+            border-radius: 50%;
+            background: var(--accent-soft);
+            filter: blur(10px);
+            pointer-events: none;
+        }
+
+        .feature-card:hover {
+            transform: translateY(-6px);
+            border-color: var(--border-light);
+            background:
+                linear-gradient(
+                    145deg,
+                    rgba(124,92,255,0.08),
+                    rgba(255,255,255,0.015)
+                ),
+                var(--surface);
+        }
+
+        .feature-icon {
+            width: 48px;
+            height: 48px;
+            display: grid;
+            place-items: center;
+            border-radius: 14px;
+            background: var(--accent-soft);
+            border: 1px solid rgba(124,92,255,0.2);
+            color: var(--accent-light);
+            font-size: 18px;
+            margin-bottom: 24px;
+        }
+
+        .feature-card h3 {
+            font-family: "Space Grotesk", sans-serif;
+            font-size: 20px;
+            letter-spacing: -0.02em;
+            margin-bottom: 10px;
+        }
+
+        .feature-card p {
+            color: var(--text-soft);
+            font-size: 14px;
+            line-height: 1.7;
+        }
+
+        /* QR types */
+
+        .qr-types-section {
+            padding-top: 130px;
+        }
+
+        .section-heading {
+            max-width: 650px;
+            margin-bottom: 45px;
+        }
+
+        .section-heading .eyebrow {
+            margin-bottom: 14px;
+        }
+
+        .section-heading h2 {
+            font-size: clamp(2rem, 4vw, 3.3rem);
+            line-height: 1.05;
+            letter-spacing: -0.045em;
+            margin-bottom: 15px;
+        }
+
+        .section-heading p {
+            color: var(--text-soft);
+            line-height: 1.7;
+        }
+
+        .qr-type-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 16px;
+        }
+
+        .qr-type-card {
+            display: flex;
+            align-items: center;
+            gap: 18px;
+            padding: 23px;
+            border: 1px solid var(--border);
+            border-radius: var(--radius-md);
+            background: var(--surface);
+            transition:
+                transform 0.3s ease,
+                border-color 0.3s ease;
+        }
+
+        .qr-type-card:hover {
+            transform: translateY(-4px);
+            border-color: var(--border-light);
+        }
+
+        .qr-type-icon {
+            flex: 0 0 46px;
+            width: 46px;
+            height: 46px;
+            display: grid;
+            place-items: center;
+            border-radius: 13px;
+            background: var(--surface-light);
+            color: var(--accent-light);
+            border: 1px solid var(--border);
+        }
+
+        .qr-type-card h3 {
+            font-size: 16px;
+            margin-bottom: 4px;
+        }
+
+        .qr-type-card p {
+            font-size: 13px;
+            color: var(--text-muted);
+            line-height: 1.5;
+        }
+
+        /* Customization showcase */
+
+        .custom-section {
+            padding-top: 130px;
+        }
+
+        .custom-showcase {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 22px;
+            align-items: stretch;
+        }
+
+        .custom-panel {
+            padding: 38px;
+            border: 1px solid var(--border);
+            border-radius: var(--radius-lg);
+            background: var(--surface);
+        }
+
+        .custom-panel h3 {
+            font-size: 25px;
+            letter-spacing: -0.025em;
+            margin-bottom: 12px;
+        }
+
+        .custom-panel > p {
+            color: var(--text-soft);
+            line-height: 1.7;
+            margin-bottom: 28px;
+        }
+
+        .custom-list {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+
+        .custom-list-item {
+            display: flex;
+            gap: 13px;
+            align-items: flex-start;
+        }
+
+        .custom-list-item i {
+            margin-top: 3px;
+            color: var(--accent-light);
+            font-size: 13px;
+        }
+
+        .custom-list-item strong {
+            display: block;
+            font-size: 14px;
+            margin-bottom: 3px;
+        }
+
+        .custom-list-item span {
+            display: block;
+            color: var(--text-muted);
+            font-size: 13px;
+            line-height: 1.5;
+        }
+
+        /* Visual panel */
+
+        .qr-demo {
+            min-height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .qr-demo::before {
+            content: "";
+            position: absolute;
+            width: 280px;
+            height: 280px;
+            border-radius: 50%;
+            background: var(--accent-soft);
+            filter: blur(55px);
+        }
+
+        .demo-paper {
+            position: relative;
+            width: 230px;
+            padding: 24px;
+            border-radius: 22px;
+            background: #fff;
+            box-shadow: 0 30px 70px rgba(0,0,0,0.35);
+            transform: rotate(-2deg);
+        }
+
+        .demo-qr {
+            aspect-ratio: 1;
+            border-radius: 10px;
+            background:
+                linear-gradient(90deg, #111 10px, transparent 10px) 0 0 / 30px 30px,
+                linear-gradient(#111 10px, transparent 10px) 0 0 / 30px 30px,
+                #fff;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .demo-qr::before,
+        .demo-qr::after {
+            content: "";
+            position: absolute;
+            width: 55px;
+            height: 55px;
+            border: 9px solid #111;
+            background: #fff;
+        }
+
+        .demo-qr::before {
+            top: 10px;
+            left: 10px;
+        }
+
+        .demo-qr::after {
+            bottom: 10px;
+            right: 10px;
+        }
+
+        .demo-label {
+            text-align: center;
+            color: #111;
+            font-family: "Space Grotesk", sans-serif;
+            font-weight: 700;
+            margin-top: 15px;
+            font-size: 14px;
+        }
+
+        /* Workflow */
+
+        .workflow-section {
+            padding-top: 130px;
+        }
+
+        .workflow-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 18px;
+        }
+
+        .workflow-card {
+            position: relative;
+            padding: 30px;
+            border-top: 1px solid var(--border);
+        }
+
+        .workflow-number {
+            font-family: "Space Grotesk", sans-serif;
+            font-size: 13px;
+            color: var(--accent-light);
+            margin-bottom: 22px;
+            letter-spacing: 0.08em;
+        }
+
+        .workflow-card h3 {
+            font-size: 21px;
+            margin-bottom: 10px;
+        }
+
+        .workflow-card p {
+            color: var(--text-soft);
+            font-size: 14px;
+            line-height: 1.7;
+        }
+
+        /* CTA */
+
+        .features-cta {
+            margin-top: 130px;
+            padding: 70px 40px;
+            text-align: center;
+            border: 1px solid var(--border);
+            border-radius: var(--radius-lg);
+            background:
+                radial-gradient(
+                    circle at 50% 0%,
+                    rgba(124,92,255,0.18),
+                    transparent 55%
+                ),
+                var(--surface);
+            overflow: hidden;
+        }
+
+        .features-cta h2 {
+            font-size: clamp(2rem, 4vw, 3.4rem);
+            letter-spacing: -0.045em;
+            margin-bottom: 15px;
+        }
+
+        .features-cta p {
+            max-width: 560px;
+            margin: 0 auto 28px;
+            color: var(--text-soft);
+            line-height: 1.7;
+        }
+
+        .features-cta .btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 9px;
+        }
+
+
+        /* =========================================================
+           RESPONSIVE
+           ========================================================= */
+
+        @media (max-width: 950px) {
+
+            .feature-grid,
+            .qr-type-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .custom-showcase {
+                grid-template-columns: 1fr;
+            }
+
+        }
+
+        @media (max-width: 760px) {
+
+            .features-page {
+                padding-top: 120px;
+                padding-bottom: 70px;
+            }
+
+            .features-hero {
+                margin-bottom: 65px;
+            }
+
+            .features-hero h1 {
+                font-size: clamp(2.7rem, 12vw, 4rem);
+            }
+
+            .features-hero p {
+                font-size: 15px;
+            }
+
+            .qr-types-section,
+            .custom-section,
+            .workflow-section {
+                padding-top: 90px;
+            }
+
+            .workflow-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .workflow-card {
+                padding: 24px 0;
+            }
+
+            .features-cta {
+                margin-top: 90px;
+                padding: 55px 22px;
+            }
+
+        }
+
+        @media (max-width: 560px) {
+
+            .feature-grid,
+            .qr-type-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .feature-card {
+                min-height: auto;
+                padding: 25px;
+            }
+
+            .custom-panel {
+                padding: 25px;
+            }
+
+            .demo-paper {
+                width: 200px;
+            }
+
+            .section-heading {
+                margin-bottom: 32px;
+            }
+
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- =====================================================
+         HEADER
+         ===================================================== -->
+
+    <header class="site-header">
+        <nav class="navbar container">
+
+            <a href="index.html" class="brand">
+                <span class="brand-mark">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </span>
+
+                <span class="brand-name">QRLY</span>
+            </a>
+
+            <button
+                class="mobile-menu-toggle"
+                id="mobileMenuToggle"
+                aria-label="Toggle navigation"
+                aria-expanded="false"
+            >
+                <i class="fa-solid fa-bars"></i>
+            </button>
+
+            <div class="nav-links" id="navLinks">
+                <a href="index.html">Home</a>
+                <a href="generator.html">Generator</a>
+                <a href="features.html" class="active">Features</a>
+                <a href="about.html">About</a>
+                <a href="contact.html">Contact</a>
+
+                <a href="generator.html" class="nav-cta">
+                    Create QR
+                    <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                </a>
+            </div>
+
+        </nav>
+    </header>
+
+
+    <!-- =====================================================
+         MAIN
+         ===================================================== -->
+
+    <main class="features-page">
+
+        <div class="container">
+
+            <!-- HERO -->
+
+            <section class="features-hero reveal">
+
+                <div class="eyebrow">
+                    <i class="fa-solid fa-sparkles"></i>
+                    Everything you need
+                </div>
+
+                <h1>
+                    Powerful tools.<br>
+                    <span>Simple experience.</span>
+                </h1>
+
+                <p>
+                    QRLY gives you everything you need to create,
+                    customize and share professional QR codes without
+                    unnecessary complexity.
+                </p>
+
+            </section>
+
+
+            <!-- CORE FEATURES -->
+
+            <section class="feature-grid">
+
+                <article class="feature-card reveal">
+                    <div class="feature-icon">
+                        <i class="fa-solid fa-bolt"></i>
+                    </div>
+
+                    <h3>Instant generation</h3>
+
+                    <p>
+                        Create a working QR code in seconds.
+                        Everything happens directly in your browser.
+                    </p>
+                </article>
+
+
+                <article class="feature-card reveal">
+                    <div class="feature-icon">
+                        <i class="fa-solid fa-palette"></i>
+                    </div>
+
+                    <h3>Custom styling</h3>
+
+                    <p>
+                        Choose your own foreground and background
+                        colors to match your brand or personal style.
+                    </p>
+                </article>
+
+
+                <article class="feature-card reveal">
+                    <div class="feature-icon">
+                        <i class="fa-solid fa-image"></i>
+                    </div>
+
+                    <h3>Logo support</h3>
+
+                    <p>
+                        Add a logo to the center of your QR code
+                        for a more recognizable branded result.
+                    </p>
+                </article>
+
+
+                <article class="feature-card reveal">
+                    <div class="feature-icon">
+                        <i class="fa-solid fa-download"></i>
+                    </div>
+
+                    <h3>Easy downloads</h3>
+
+                    <p>
+                        Download your finished QR code and use it
+                        anywhere from websites to printed materials.
+                    </p>
+                </article>
+
+
+                <article class="feature-card reveal">
+                    <div class="feature-icon">
+                        <i class="fa-solid fa-sliders"></i>
+                    </div>
+
+                    <h3>Flexible controls</h3>
+
+                    <p>
+                        Adjust QR size and error correction to
+                        create the right output for your project.
+                    </p>
+                </article>
+
+
+                <article class="feature-card reveal">
+                    <div class="feature-icon">
+                        <i class="fa-solid fa-shield-halved"></i>
+                    </div>
+
+                    <h3>Browser-based</h3>
+
+                    <p>
+                        Your QR content can be generated locally
+                        in your browser without sending it to a server.
+                    </p>
+                </article>
+
+            </section>
+
+
+            <!-- QR TYPES -->
+
+            <section class="qr-types-section">
+
+                <div class="section-heading reveal">
+
+                    <div class="eyebrow">
+                        <i class="fa-solid fa-qrcode"></i>
+                        QR types
+                    </div>
+
+                    <h2>
+                        One generator.<br>
+                        Six useful formats.
+                    </h2>
+
+                    <p>
+                        Whether you're sharing a website, contact
+                        information or Wi-Fi credentials, QRLY has
+                        a format ready for the job.
+                    </p>
+
+                </div>
+
+
+                <div class="qr-type-grid">
+
+                    <article class="qr-type-card reveal">
+                        <div class="qr-type-icon">
+                            <i class="fa-solid fa-link"></i>
+                        </div>
+
+                        <div>
+                            <h3>Website URL</h3>
+                            <p>Send people directly to any webpage.</p>
+                        </div>
+                    </article>
+
+
+                    <article class="qr-type-card reveal">
+                        <div class="qr-type-icon">
+                            <i class="fa-solid fa-align-left"></i>
+                        </div>
+
+                        <div>
+                            <h3>Plain Text</h3>
+                            <p>Turn any message into a scannable code.</p>
+                        </div>
+                    </article>
+
+
+                    <article class="qr-type-card reveal">
+                        <div class="qr-type-icon">
+                            <i class="fa-solid fa-envelope"></i>
+                        </div>
+
+                        <div>
+                            <h3>Email</h3>
+                            <p>Open an email with a ready-to-use address.</p>
+                        </div>
+                    </article>
+
+
+                    <article class="qr-type-card reveal">
+                        <div class="qr-type-icon">
+                            <i class="fa-solid fa-phone"></i>
+                        </div>
+
+                        <div>
+                            <h3>Phone</h3>
+                            <p>Make calling a number one scan away.</p>
+                        </div>
+                    </article>
+
+
+                    <article class="qr-type-card reveal">
+                        <div class="qr-type-icon">
+                            <i class="fa-solid fa-wifi"></i>
+                        </div>
+
+                        <div>
+                            <h3>Wi-Fi</h3>
+                            <p>Share network credentials without typing.</p>
+                        </div>
+                    </article>
+
+
+                    <article class="qr-type-card reveal">
+                        <div class="qr-type-icon">
+                            <i class="fa-solid fa-address-card"></i>
+                        </div>
+
+                        <div>
+                            <h3>vCard</h3>
+                            <p>Share contact details in one simple scan.</p>
+                        </div>
+                    </article>
+
+                </div>
+
+            </section>
+
+
+            <!-- CUSTOMIZATION -->
+
+            <section class="custom-section">
+
+                <div class="custom-showcase">
+
+                    <div class="custom-panel reveal">
+
+                        <div class="eyebrow">
+                            <i class="fa-solid fa-wand-magic-sparkles"></i>
+                            Customize it
+                        </div>
+
+                        <h3>Make your QR code feel like yours.</h3>
+
+                        <p>
+                            QR codes don't have to look generic.
+                            QRLY gives you simple controls to create
+                            something that fits your brand.
+                        </p>
+
+
+                        <div class="custom-list">
+
+                            <div class="custom-list-item">
+                                <i class="fa-solid fa-check"></i>
+
+                                <div>
+                                    <strong>Custom colors</strong>
+                                    <span>
+                                        Choose foreground and background
+                                        colors for your QR code.
+                                    </span>
+                                </div>
+                            </div>
+
+
+                            <div class="custom-list-item">
+                                <i class="fa-solid fa-check"></i>
+
+                                <div>
+                                    <strong>Logo upload</strong>
+                                    <span>
+                                        Place your logo in the center
+                                        of your generated code.
+                                    </span>
+                                </div>
+                            </div>
+
+
+                            <div class="custom-list-item">
+                                <i class="fa-solid fa-check"></i>
+
+                                <div>
+                                    <strong>Adjustable size</strong>
+                                    <span>
+                                        Choose the QR dimensions that
+                                        work best for your use case.
+                                    </span>
+                                </div>
+                            </div>
+
+
+                            <div class="custom-list-item">
+                                <i class="fa-solid fa-check"></i>
+
+                                <div>
+                                    <strong>Error correction</strong>
+                                    <span>
+                                        Select the correction level
+                                        for more flexible scanning.
+                                    </span>
+                                </div>
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="custom-panel qr-demo reveal">
+
+                        <div class="demo-paper">
+
+                            <div class="demo-qr"></div>
+
+                            <div class="demo-label">
+                                QRLY
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+
+            <!-- WORKFLOW -->
+
+            <section class="workflow-section">
+
+                <div class="section-heading reveal">
+
+                    <div class="eyebrow">
+                        <i class="fa-solid fa-route"></i>
+                        How it works
+                    </div>
+
+                    <h2>
+                        From idea to QR<br>
+                        in three steps.
+                    </h2>
+
+                    <p>
+                        No account. No complicated setup.
+                        Just enter your content, customize it
+                        and download.
+                    </p>
+
+                </div>
+
+
+                <div class="workflow-grid">
+
+                    <article class="workflow-card reveal">
+
+                        <div class="workflow-number">
+                            01 / ENTER
+                        </div>
+
+                        <h3>Add your content</h3>
+
+                        <p>
+                            Select a QR type and enter the information
+                            you want to share.
+                        </p>
+
+                    </article>
+
+
+                    <article class="workflow-card reveal">
+
+                        <div class="workflow-number">
+                            02 / CUSTOMIZE
+                        </div>
+
+                        <h3>Make it yours</h3>
+
+                        <p>
+                            Adjust colors, size, error correction
+                            and optional branding.
+                        </p>
+
+                    </article>
+
+
+                    <article class="workflow-card reveal">
+
+                        <div class="workflow-number">
+                            03 / DOWNLOAD
+                        </div>
+
+                        <h3>Use it anywhere</h3>
+
+                        <p>
+                            Download your QR code and add it to
+                            websites, menus, cards, packaging or print.
+                        </p>
+
+                    </article>
+
+                </div>
+
+            </section>
+
+
+            <!-- CTA -->
+
+            <section class="features-cta reveal">
+
+                <div class="eyebrow">
+                    <i class="fa-solid fa-qrcode"></i>
+                    Ready when you are
+                </div>
+
+                <h2>
+                    Create your first QR code.
+                </h2>
+
+                <p>
+                    Fast, simple and completely browser-based.
+                    Start creating in seconds.
+                </p>
+
+                <a href="generator.html" class="btn btn-primary">
+                    Open QR Generator
+                    <i class="fa-solid fa-arrow-right"></i>
+                </a>
+
+            </section>
+
+        </div>
+
+    </main>
+
+
+    <!-- =====================================================
+         FOOTER
+         ===================================================== -->
+
+    <footer class="site-footer">
+
+        <div class="container">
+
+            <div class="footer-main">
+
+                <div class="footer-brand">
+
+                    <a href="index.html" class="brand">
+
+                        <span class="brand-mark">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </span>
+
+                        <span class="brand-name">QRLY</span>
+
+                    </a>
+
+                    <p>
+                        Create. Customize. Connect.
+                    </p>
+
+                    <span class="footer-location">
+                        Built for the web · 2026
+                    </span>
+
+                </div>
+
+
+                <div class="footer-links-group">
+
+                    <div class="footer-column">
+
+                        <h4>Product</h4>
+
+                        <a href="generator.html">Generator</a>
+                        <a href="features.html">Features</a>
+                        <a href="about.html">About</a>
+
+                    </div>
+
+
+                    <div class="footer-column">
+
+                        <h4>Company</h4>
+
+                        <a href="contact.html">Contact</a>
+                        <a href="privacy.html">Privacy</a>
+                        <a href="terms.html">Terms</a>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <div class="footer-bottom">
+
+                <span>
+                    © 2026 QRLY. All rights reserved.
+                </span>
+
+                <span>
+                    Crafted with precision.
+                </span>
+
+            </div>
+
+        </div>
+
+    </footer>
+
+
+    <!-- =====================================================
+         PAGE SCRIPT
+         ===================================================== -->
+
+    <script>
+        /* Mobile navigation */
+
+        const mobileMenuToggle =
+            document.getElementById("mobileMenuToggle");
+
+        const navLinks =
+            document.getElementById("navLinks");
+
+
+        if (mobileMenuToggle && navLinks) {
+
+            mobileMenuToggle.addEventListener("click", () => {
+
+                const isOpen =
+                    navLinks.classList.toggle("open");
+
+                mobileMenuToggle.setAttribute(
+                    "aria-expanded",
+                    isOpen
+                );
+
+                mobileMenuToggle.innerHTML = isOpen
+                    ? '<i class="fa-solid fa-xmark"></i>'
+                    : '<i class="fa-solid fa-bars"></i>';
+            });
+
+
+            document
+                .querySelectorAll(".nav-links a")
+                .forEach(link => {
+
+                    link.addEventListener("click", () => {
+
+                        navLinks.classList.remove("open");
+
+                        mobileMenuToggle.setAttribute(
+                            "aria-expanded",
+                            "false"
+                        );
+
+                        mobileMenuToggle.innerHTML =
+                            '<i class="fa-solid fa-bars"></i>';
+
+                    });
+
+                });
+
+        }
+
+
+        /* Scroll reveal */
+
+        const revealElements =
+            document.querySelectorAll(".reveal");
+
+
+        if ("IntersectionObserver" in window) {
+
+            const revealObserver =
+                new IntersectionObserver(
+                    (entries, observer) => {
+
+                        entries.forEach(entry => {
+
+                            if (entry.isIntersecting) {
+
+                                entry.target.classList.add("visible");
+
+                                observer.unobserve(
+                                    entry.target
+                                );
+
+                            }
+
+                        });
+
+                    },
+                    {
+                        threshold: 0.12
+                    }
+                );
+
+
+            revealElements.forEach(element => {
+
+                revealObserver.observe(element);
+
+            });
+
+        } else {
+
+            revealElements.forEach(element => {
+
+                element.classList.add("visible");
+
+            });
+
+        }
+    </script>
+
+</body>
+</html>

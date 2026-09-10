@@ -1,0 +1,1066 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>About — QRLY | Create. Customize. Connect.</title>
+    <link rel="icon" type="image/svg+xml" href="./assets/qrly.svg" />
+
+    <meta
+      name="description"
+      content="Learn more about QRLY — a simple, modern QR code generator built to make creating and sharing QR codes easier."
+    />
+
+    <meta name="theme-color" content="#080a0f" />
+
+    <link rel="icon" type="image/svg+xml" href="assets/favicon.svg" />
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Font Awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    />
+
+    <!-- Main stylesheet -->
+    <link rel="stylesheet" href="css/style.css" />
+
+    <style>
+      /* =========================================================
+           QRLY ABOUT PAGE
+           ========================================================= */
+
+      .about-page {
+        padding-top: 150px;
+        padding-bottom: 100px;
+      }
+
+      /* =========================================================
+           HERO
+           ========================================================= */
+
+      .about-hero {
+        display: grid;
+        grid-template-columns: 1.05fr 0.95fr;
+        gap: 70px;
+        align-items: center;
+        min-height: 520px;
+        margin-bottom: 120px;
+      }
+
+      .about-hero-content {
+        max-width: 650px;
+      }
+
+      .about-hero .eyebrow {
+        margin-bottom: 20px;
+      }
+
+      .about-hero h1 {
+        font-size: clamp(3.2rem, 6vw, 5.6rem);
+        line-height: 0.98;
+        letter-spacing: -0.06em;
+        margin-bottom: 25px;
+      }
+
+      .about-hero h1 span {
+        color: var(--accent-light);
+      }
+
+      .about-hero p {
+        max-width: 590px;
+        color: var(--text-soft);
+        font-size: 17px;
+        line-height: 1.75;
+        margin-bottom: 32px;
+      }
+
+      .about-hero-actions {
+        display: flex;
+        align-items: center;
+        gap: 14px;
+        flex-wrap: wrap;
+      }
+
+      /* =========================================================
+           HERO VISUAL
+           ========================================================= */
+
+      .about-visual {
+        position: relative;
+        min-height: 450px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+
+      .about-glow {
+        position: absolute;
+        width: 330px;
+        height: 330px;
+        border-radius: 50%;
+        background: var(--accent-soft);
+        filter: blur(65px);
+      }
+
+      .about-orbit {
+        position: absolute;
+        width: 350px;
+        height: 350px;
+        border: 1px solid var(--border);
+        border-radius: 50%;
+      }
+
+      .about-orbit::before {
+        content: "";
+        position: absolute;
+        width: 9px;
+        height: 9px;
+        top: 24px;
+        right: 65px;
+        border-radius: 50%;
+        background: var(--accent-light);
+        box-shadow: 0 0 25px rgba(124, 92, 255, 0.7);
+      }
+
+      .about-card {
+        position: relative;
+        width: 275px;
+        padding: 30px;
+        border-radius: 28px;
+        border: 1px solid var(--border-light);
+        background:
+          linear-gradient(
+            145deg,
+            rgba(255, 255, 255, 0.06),
+            rgba(255, 255, 255, 0.015)
+          ),
+          var(--surface);
+        box-shadow: 0 35px 90px rgba(0, 0, 0, 0.35);
+        transform: rotate(-4deg);
+        z-index: 2;
+      }
+
+      .about-card-mark {
+        width: 58px;
+        height: 58px;
+        display: grid;
+        place-items: center;
+        border-radius: 17px;
+        background: var(--accent-soft);
+        border: 1px solid rgba(124, 92, 255, 0.25);
+        color: var(--accent-light);
+        font-size: 23px;
+        margin-bottom: 25px;
+      }
+
+      .about-card h3 {
+        font-size: 25px;
+        letter-spacing: -0.03em;
+        margin-bottom: 10px;
+      }
+
+      .about-card p {
+        color: var(--text-soft);
+        font-size: 14px;
+        line-height: 1.7;
+      }
+
+      .floating-label {
+        position: absolute;
+        z-index: 3;
+        padding: 10px 14px;
+        border-radius: 12px;
+        border: 1px solid var(--border-light);
+        background: rgba(17, 21, 29, 0.85);
+        backdrop-filter: blur(15px);
+        color: var(--text-soft);
+        font-size: 12px;
+        box-shadow: 0 15px 35px rgba(0, 0, 0, 0.25);
+      }
+
+      .floating-label.one {
+        top: 65px;
+        left: 20px;
+      }
+
+      .floating-label.two {
+        right: 5px;
+        bottom: 75px;
+      }
+
+      /* =========================================================
+           STORY
+           ========================================================= */
+
+      .about-story {
+        display: grid;
+        grid-template-columns: 0.75fr 1.25fr;
+        gap: 90px;
+        padding: 90px 0;
+        border-top: 1px solid var(--border);
+        border-bottom: 1px solid var(--border);
+      }
+
+      .about-story-label .eyebrow {
+        margin-bottom: 15px;
+      }
+
+      .about-story-label h2 {
+        font-size: clamp(2rem, 4vw, 3.2rem);
+        line-height: 1.05;
+        letter-spacing: -0.045em;
+      }
+
+      .about-story-content {
+        max-width: 700px;
+      }
+
+      .about-story-content p {
+        color: var(--text-soft);
+        font-size: 16px;
+        line-height: 1.85;
+        margin-bottom: 20px;
+      }
+
+      .about-story-content p:last-child {
+        margin-bottom: 0;
+      }
+
+      .about-story-content strong {
+        color: var(--text);
+        font-weight: 600;
+      }
+
+      /* =========================================================
+           PRINCIPLES
+           ========================================================= */
+
+      .principles-section {
+        padding-top: 125px;
+      }
+
+      .principles-heading {
+        max-width: 650px;
+        margin-bottom: 50px;
+      }
+
+      .principles-heading .eyebrow {
+        margin-bottom: 14px;
+      }
+
+      .principles-heading h2 {
+        font-size: clamp(2.1rem, 4vw, 3.4rem);
+        line-height: 1.05;
+        letter-spacing: -0.045em;
+        margin-bottom: 15px;
+      }
+
+      .principles-heading p {
+        color: var(--text-soft);
+        line-height: 1.7;
+      }
+
+      .principles-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 18px;
+      }
+
+      .principle-card {
+        padding: 30px;
+        min-height: 245px;
+        border: 1px solid var(--border);
+        border-radius: var(--radius-lg);
+        background: var(--surface);
+        transition:
+          transform 0.35s ease,
+          border-color 0.35s ease;
+      }
+
+      .principle-card:hover {
+        transform: translateY(-6px);
+        border-color: var(--border-light);
+      }
+
+      .principle-icon {
+        width: 48px;
+        height: 48px;
+        display: grid;
+        place-items: center;
+        border-radius: 14px;
+        background: var(--accent-soft);
+        border: 1px solid rgba(124, 92, 255, 0.2);
+        color: var(--accent-light);
+        margin-bottom: 24px;
+      }
+
+      .principle-card h3 {
+        font-size: 20px;
+        margin-bottom: 10px;
+        letter-spacing: -0.02em;
+      }
+
+      .principle-card p {
+        color: var(--text-soft);
+        font-size: 14px;
+        line-height: 1.7;
+      }
+
+      /* =========================================================
+           PRODUCT PHILOSOPHY
+           ========================================================= */
+
+      .philosophy-section {
+        padding-top: 125px;
+      }
+
+      .philosophy-box {
+        position: relative;
+        padding: 70px;
+        overflow: hidden;
+        border: 1px solid var(--border);
+        border-radius: var(--radius-lg);
+        background:
+          radial-gradient(
+            circle at 85% 20%,
+            rgba(124, 92, 255, 0.15),
+            transparent 35%
+          ),
+          var(--surface);
+      }
+
+      .philosophy-box::after {
+        content: "QR";
+        position: absolute;
+        right: -20px;
+        bottom: -85px;
+        font-family: "Space Grotesk", sans-serif;
+        font-size: 240px;
+        line-height: 1;
+        font-weight: 700;
+        color: rgba(255, 255, 255, 0.018);
+        pointer-events: none;
+      }
+
+      .philosophy-content {
+        position: relative;
+        z-index: 1;
+        max-width: 820px;
+      }
+
+      .philosophy-content .eyebrow {
+        margin-bottom: 18px;
+      }
+
+      .philosophy-content h2 {
+        font-size: clamp(2.3rem, 5vw, 4.4rem);
+        line-height: 1.02;
+        letter-spacing: -0.055em;
+        margin-bottom: 22px;
+      }
+
+      .philosophy-content h2 span {
+        color: var(--accent-light);
+      }
+
+      .philosophy-content p {
+        max-width: 680px;
+        color: var(--text-soft);
+        font-size: 16px;
+        line-height: 1.8;
+      }
+
+      /* =========================================================
+           STATS
+           ========================================================= */
+
+      .about-stats {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        margin-top: 80px;
+        border-top: 1px solid var(--border);
+        border-bottom: 1px solid var(--border);
+      }
+
+      .about-stat {
+        padding: 35px 25px;
+        text-align: center;
+        border-right: 1px solid var(--border);
+      }
+
+      .about-stat:last-child {
+        border-right: 0;
+      }
+
+      .about-stat strong {
+        display: block;
+        font-family: "Space Grotesk", sans-serif;
+        font-size: 30px;
+        letter-spacing: -0.04em;
+        margin-bottom: 7px;
+      }
+
+      .about-stat span {
+        color: var(--text-muted);
+        font-size: 12px;
+        text-transform: uppercase;
+        letter-spacing: 0.08em;
+      }
+
+      /* =========================================================
+           CTA
+           ========================================================= */
+
+      .about-cta {
+        margin-top: 125px;
+        padding: 70px 40px;
+        text-align: center;
+        border: 1px solid var(--border);
+        border-radius: var(--radius-lg);
+        background:
+          radial-gradient(
+            circle at 50% 0%,
+            rgba(124, 92, 255, 0.18),
+            transparent 55%
+          ),
+          var(--surface);
+      }
+
+      .about-cta .eyebrow {
+        margin-bottom: 18px;
+      }
+
+      .about-cta h2 {
+        font-size: clamp(2rem, 4vw, 3.5rem);
+        letter-spacing: -0.045em;
+        margin-bottom: 15px;
+      }
+
+      .about-cta p {
+        max-width: 560px;
+        margin: 0 auto 28px;
+        color: var(--text-soft);
+        line-height: 1.7;
+      }
+
+      .about-cta .btn {
+        display: inline-flex;
+        align-items: center;
+        gap: 9px;
+      }
+
+      /* =========================================================
+           RESPONSIVE
+           ========================================================= */
+
+      @media (max-width: 950px) {
+        .about-hero {
+          grid-template-columns: 1fr;
+          gap: 45px;
+          text-align: center;
+        }
+
+        .about-hero-content {
+          margin: 0 auto;
+        }
+
+        .about-hero p {
+          margin-left: auto;
+          margin-right: auto;
+        }
+
+        .about-hero-actions {
+          justify-content: center;
+        }
+
+        .about-visual {
+          min-height: 390px;
+        }
+
+        .about-story {
+          grid-template-columns: 1fr;
+          gap: 30px;
+        }
+
+        .principles-grid {
+          grid-template-columns: repeat(2, 1fr);
+        }
+
+        .about-stats {
+          grid-template-columns: repeat(2, 1fr);
+        }
+
+        .about-stat:nth-child(2) {
+          border-right: 0;
+        }
+
+        .about-stat:nth-child(-n + 2) {
+          border-bottom: 1px solid var(--border);
+        }
+      }
+
+      @media (max-width: 760px) {
+        .about-page {
+          padding-top: 120px;
+          padding-bottom: 70px;
+        }
+
+        .about-hero {
+          margin-bottom: 85px;
+          min-height: auto;
+        }
+
+        .about-hero h1 {
+          font-size: clamp(2.8rem, 12vw, 4.2rem);
+        }
+
+        .about-hero p {
+          font-size: 15px;
+        }
+
+        .about-visual {
+          min-height: 340px;
+        }
+
+        .about-orbit {
+          width: 285px;
+          height: 285px;
+        }
+
+        .about-card {
+          width: 235px;
+          padding: 25px;
+        }
+
+        .floating-label.one {
+          left: 0;
+          top: 45px;
+        }
+
+        .floating-label.two {
+          right: 0;
+          bottom: 45px;
+        }
+
+        .about-story {
+          padding: 70px 0;
+        }
+
+        .principles-section,
+        .philosophy-section {
+          padding-top: 90px;
+        }
+
+        .philosophy-box {
+          padding: 45px 25px;
+        }
+
+        .about-cta {
+          margin-top: 90px;
+          padding: 55px 22px;
+        }
+      }
+
+      @media (max-width: 560px) {
+        .principles-grid {
+          grid-template-columns: 1fr;
+        }
+
+        .principle-card {
+          min-height: auto;
+          padding: 25px;
+        }
+
+        .about-stats {
+          grid-template-columns: 1fr 1fr;
+        }
+
+        .about-stat {
+          padding: 28px 12px;
+        }
+
+        .about-stat strong {
+          font-size: 25px;
+        }
+
+        .about-stat span {
+          font-size: 10px;
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <!-- =====================================================
+         HEADER
+         ===================================================== -->
+
+    <header class="site-header">
+      <nav class="navbar container">
+        <a href="index.html" class="brand">
+          <span class="brand-mark">
+            <span></span>
+            <span></span>
+            <span></span>
+          </span>
+
+          <span class="brand-name">QRLY</span>
+        </a>
+
+        <button
+          class="mobile-menu-toggle"
+          id="mobileMenuToggle"
+          aria-label="Toggle navigation"
+          aria-expanded="false"
+        >
+          <i class="fa-solid fa-bars"></i>
+        </button>
+
+        <div class="nav-links" id="navLinks">
+          <a href="index.html">Home</a>
+
+          <a href="generator.html">Generator</a>
+
+          <a href="features.html">Features</a>
+
+          <a href="about.html" class="active">About</a>
+
+          <a href="contact.html">Contact</a>
+
+          <a href="generator.html" class="nav-cta">
+            Create QR
+            <i class="fa-solid fa-arrow-up-right-from-square"></i>
+          </a>
+        </div>
+      </nav>
+    </header>
+
+    <!-- =====================================================
+         MAIN
+         ===================================================== -->
+
+    <main class="about-page">
+      <div class="container">
+        <!-- =================================================
+                 HERO
+                 ================================================= -->
+
+        <section class="about-hero">
+          <div class="about-hero-content reveal">
+            <div class="eyebrow">
+              <i class="fa-solid fa-circle-info"></i>
+              About QRLY
+            </div>
+
+            <h1>
+              Simple by design.<br />
+              <span>Powerful by nature.</span>
+            </h1>
+
+            <p>
+              QRLY was built around one simple idea: creating a QR code
+              shouldn't feel complicated. We designed a faster, cleaner and more
+              enjoyable way to turn everyday information into something people
+              can instantly scan.
+            </p>
+
+            <div class="about-hero-actions">
+              <a href="generator.html" class="btn btn-primary">
+                Create a QR
+                <i class="fa-solid fa-arrow-right"></i>
+              </a>
+
+              <a href="features.html" class="btn btn-secondary">
+                Explore features
+              </a>
+            </div>
+          </div>
+
+          <!-- VISUAL -->
+
+          <div class="about-visual reveal">
+            <div class="about-glow"></div>
+
+            <div class="about-orbit"></div>
+
+            <div class="floating-label one">
+              <i class="fa-solid fa-bolt"></i>
+              Fast & simple
+            </div>
+
+            <div class="about-card">
+              <div class="about-card-mark">
+                <i class="fa-solid fa-qrcode"></i>
+              </div>
+
+              <h3>Create.</h3>
+
+              <p>
+                Turn links, text, contact details, Wi-Fi information and more
+                into a QR code in seconds.
+              </p>
+            </div>
+
+            <div class="floating-label two">
+              <i class="fa-solid fa-shield-halved"></i>
+              Browser-based
+            </div>
+          </div>
+        </section>
+
+        <!-- =================================================
+                 STORY
+                 ================================================= -->
+
+        <section class="about-story">
+          <div class="about-story-label reveal">
+            <div class="eyebrow">
+              <i class="fa-solid fa-book-open"></i>
+              The idea
+            </div>
+
+            <h2>
+              QR codes are simple.<br />
+              Using them should be too.
+            </h2>
+          </div>
+
+          <div class="about-story-content reveal">
+            <p>
+              QR codes are everywhere — on menus, packaging, business cards,
+              posters, products and screens.
+            </p>
+
+            <p>
+              But many QR tools make the process feel unnecessarily complicated.
+              Too many settings, too many distractions and too much friction
+              between an idea and the final result.
+            </p>
+
+            <p>
+              <strong> QRLY takes the opposite approach. </strong>
+              We focus on the things people actually need: choose what you're
+              sharing, customize it when you want to, and download a QR code
+              that is ready to use.
+            </p>
+
+            <p>
+              No complicated workflow. No unnecessary account creation. Just a
+              clean tool built for the web.
+            </p>
+          </div>
+        </section>
+
+        <!-- =================================================
+                 PRINCIPLES
+                 ================================================= -->
+
+        <section class="principles-section">
+          <div class="principles-heading reveal">
+            <div class="eyebrow">
+              <i class="fa-solid fa-compass"></i>
+              What we believe
+            </div>
+
+            <h2>Built around better basics.</h2>
+
+            <p>
+              QRLY isn't trying to make QR codes complicated. We're trying to
+              make the experience better.
+            </p>
+          </div>
+
+          <div class="principles-grid">
+            <article class="principle-card reveal">
+              <div class="principle-icon">
+                <i class="fa-solid fa-wand-magic-sparkles"></i>
+              </div>
+
+              <h3>Simplicity first</h3>
+
+              <p>
+                Every part of the experience should feel understandable from the
+                first click.
+              </p>
+            </article>
+
+            <article class="principle-card reveal">
+              <div class="principle-icon">
+                <i class="fa-solid fa-gauge-high"></i>
+              </div>
+
+              <h3>Speed matters</h3>
+
+              <p>
+                The best tools get out of your way. QRLY is designed to help you
+                finish quickly.
+              </p>
+            </article>
+
+            <article class="principle-card reveal">
+              <div class="principle-icon">
+                <i class="fa-solid fa-mobile-screen-button"></i>
+              </div>
+
+              <h3>Built for everywhere</h3>
+
+              <p>
+                From desktop screens to mobile phones, QRLY is designed to
+                remain easy to use.
+              </p>
+            </article>
+
+            <article class="principle-card reveal">
+              <div class="principle-icon">
+                <i class="fa-solid fa-pen-ruler"></i>
+              </div>
+
+              <h3>Useful customization</h3>
+
+              <p>
+                Personalization should improve the result, not make the process
+                harder.
+              </p>
+            </article>
+
+            <article class="principle-card reveal">
+              <div class="principle-icon">
+                <i class="fa-solid fa-lock"></i>
+              </div>
+
+              <h3>Privacy-minded</h3>
+
+              <p>
+                We believe everyday tools should collect as little information
+                as reasonably possible.
+              </p>
+            </article>
+
+            <article class="principle-card reveal">
+              <div class="principle-icon">
+                <i class="fa-solid fa-heart"></i>
+              </div>
+
+              <h3>Made with care</h3>
+
+              <p>
+                Good design isn't just about appearance. It's about making every
+                interaction feel right.
+              </p>
+            </article>
+          </div>
+        </section>
+
+        <!-- =================================================
+                 PHILOSOPHY
+                 ================================================= -->
+
+        <section class="philosophy-section">
+          <div class="philosophy-box reveal">
+            <div class="philosophy-content">
+              <div class="eyebrow">
+                <i class="fa-solid fa-lightbulb"></i>
+                Our philosophy
+              </div>
+
+              <h2>
+                Less friction.<br />
+                <span>More connection.</span>
+              </h2>
+
+              <p>
+                A QR code is ultimately about connection — connecting someone to
+                a website, a message, a business, a person or an experience.
+                QRLY exists to make that connection easier to create and easier
+                to share.
+              </p>
+            </div>
+          </div>
+
+          <!-- STATS -->
+
+          <div class="about-stats reveal">
+            <div class="about-stat">
+              <strong>6</strong>
+
+              <span>QR formats</span>
+            </div>
+
+            <div class="about-stat">
+              <strong>100%</strong>
+
+              <span>Browser-based</span>
+            </div>
+
+            <div class="about-stat">
+              <strong>0</strong>
+
+              <span>Unnecessary steps</span>
+            </div>
+
+            <div class="about-stat">
+              <strong>∞</strong>
+
+              <span>Ways to connect</span>
+            </div>
+          </div>
+        </section>
+
+        <!-- =================================================
+                 CTA
+                 ================================================= -->
+
+        <section class="about-cta reveal">
+          <div class="eyebrow">
+            <i class="fa-solid fa-qrcode"></i>
+            Your turn
+          </div>
+
+          <h2>Ready to create something?</h2>
+
+          <p>
+            Pick a format, add your content and create a QR code that is ready
+            to share.
+          </p>
+
+          <a href="generator.html" class="btn btn-primary">
+            Open QR Generator
+
+            <i class="fa-solid fa-arrow-right"></i>
+          </a>
+        </section>
+      </div>
+    </main>
+
+    <!-- =====================================================
+         FOOTER
+         ===================================================== -->
+
+    <footer class="site-footer">
+      <div class="container">
+        <div class="footer-main">
+          <div class="footer-brand">
+            <a href="index.html" class="brand">
+              <span class="brand-mark">
+                <span></span>
+                <span></span>
+                <span></span>
+              </span>
+
+              <span class="brand-name"> QRLY </span>
+            </a>
+
+            <p>Create. Customize. Connect.</p>
+
+            <span class="footer-location"> Built for the web · 2026 </span>
+          </div>
+
+          <div class="footer-links-group">
+            <div class="footer-column">
+              <h4>Product</h4>
+
+              <a href="generator.html"> Generator </a>
+
+              <a href="features.html"> Features </a>
+
+              <a href="about.html"> About </a>
+            </div>
+
+            <div class="footer-column">
+              <h4>Company</h4>
+
+              <a href="contact.html"> Contact </a>
+
+              <a href="privacy.html"> Privacy </a>
+
+              <a href="terms.html"> Terms </a>
+            </div>
+          </div>
+        </div>
+
+        <div class="footer-bottom">
+          <span> © 2026 QRLY. All rights reserved. </span>
+
+          <span> Crafted with precision. </span>
+        </div>
+      </div>
+    </footer>
+
+    <!-- =====================================================
+         PAGE SCRIPT
+         ===================================================== -->
+
+    <script>
+      /* =====================================================
+           MOBILE NAVIGATION
+           ===================================================== */
+
+      const mobileMenuToggle = document.getElementById("mobileMenuToggle");
+
+      const navLinks = document.getElementById("navLinks");
+
+      if (mobileMenuToggle && navLinks) {
+        mobileMenuToggle.addEventListener("click", () => {
+          const isOpen = navLinks.classList.toggle("open");
+
+          mobileMenuToggle.setAttribute("aria-expanded", isOpen);
+
+          mobileMenuToggle.innerHTML = isOpen
+            ? '<i class="fa-solid fa-xmark"></i>'
+            : '<i class="fa-solid fa-bars"></i>';
+        });
+
+        document.querySelectorAll(".nav-links a").forEach((link) => {
+          link.addEventListener("click", () => {
+            navLinks.classList.remove("open");
+
+            mobileMenuToggle.setAttribute("aria-expanded", "false");
+
+            mobileMenuToggle.innerHTML = '<i class="fa-solid fa-bars"></i>';
+          });
+        });
+      }
+
+      /* =====================================================
+           SCROLL REVEAL
+           ===================================================== */
+
+      const revealElements = document.querySelectorAll(".reveal");
+
+      if ("IntersectionObserver" in window) {
+        const revealObserver = new IntersectionObserver(
+          (entries, observer) => {
+            entries.forEach((entry) => {
+              if (entry.isIntersecting) {
+                entry.target.classList.add("visible");
+
+                observer.unobserve(entry.target);
+              }
+            });
+          },
+          {
+            threshold: 0.12,
+          },
+        );
+
+        revealElements.forEach((element) => {
+          revealObserver.observe(element);
+        });
+      } else {
+        revealElements.forEach((element) => {
+          element.classList.add("visible");
+        });
+      }
+    </script>
+  </body>
+</html>

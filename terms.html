@@ -1,0 +1,1128 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Terms of Service — QRLY</title>
+    <link rel="icon" type="image/svg+xml" href="./assets/qrly.svg" />
+
+    <meta
+      name="description"
+      content="Read the QRLY Terms of Service covering use of our QR code generator, website, content, and services."
+    />
+
+    <meta name="robots" content="index, follow" />
+
+    <link rel="canonical" href="terms.html" />
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Font Awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    />
+
+    <!-- Master Styles -->
+    <link rel="stylesheet" href="css/style.css" />
+
+    <style>
+      /* =========================================================
+       QRLY TERMS PAGE
+       ========================================================= */
+
+      .terms-page {
+        padding-top: 150px;
+        padding-bottom: 100px;
+      }
+
+      /* ---------------------------------------------------------
+       HERO
+       --------------------------------------------------------- */
+
+      .terms-hero {
+        max-width: 850px;
+        margin: 0 auto 70px;
+        text-align: center;
+      }
+
+      .terms-eyebrow {
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+
+        padding: 8px 13px;
+        margin-bottom: 22px;
+
+        border: 1px solid var(--border);
+        border-radius: 999px;
+
+        background: rgba(124, 92, 255, 0.08);
+
+        color: var(--accent-light);
+        font-size: 12px;
+        font-weight: 700;
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+      }
+
+      .terms-eyebrow i {
+        font-size: 11px;
+      }
+
+      .terms-hero h1 {
+        margin: 0 0 20px;
+
+        font-family: "Space Grotesk", sans-serif;
+        font-size: clamp(2.8rem, 6vw, 5rem);
+        line-height: 0.98;
+        letter-spacing: -0.055em;
+      }
+
+      .terms-hero h1 span {
+        background: linear-gradient(135deg, var(--white), var(--accent-light));
+
+        -webkit-background-clip: text;
+        background-clip: text;
+        -webkit-text-fill-color: transparent;
+      }
+
+      .terms-hero p {
+        max-width: 650px;
+        margin: 0 auto;
+
+        color: var(--text-soft);
+        font-size: 17px;
+        line-height: 1.8;
+      }
+
+      .last-updated {
+        margin-top: 20px;
+
+        color: var(--text-muted);
+        font-size: 13px;
+      }
+
+      /* ---------------------------------------------------------
+       CONTENT LAYOUT
+       --------------------------------------------------------- */
+
+      .terms-layout {
+        display: grid;
+        grid-template-columns: 230px minmax(0, 1fr);
+
+        gap: 55px;
+
+        align-items: start;
+      }
+
+      /* ---------------------------------------------------------
+       SIDEBAR
+       --------------------------------------------------------- */
+
+      .terms-sidebar {
+        position: sticky;
+        top: 105px;
+
+        padding: 20px;
+
+        border: 1px solid var(--border);
+        border-radius: var(--radius-lg);
+
+        background: rgba(17, 21, 29, 0.7);
+
+        backdrop-filter: blur(18px);
+      }
+
+      .terms-sidebar-label {
+        margin-bottom: 14px;
+
+        color: var(--text-muted);
+        font-size: 11px;
+        font-weight: 700;
+        letter-spacing: 0.1em;
+        text-transform: uppercase;
+      }
+
+      .terms-sidebar a {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+
+        padding: 9px 10px;
+
+        border-radius: 9px;
+
+        color: var(--text-soft);
+        font-size: 13px;
+        text-decoration: none;
+
+        transition:
+          color 0.25s ease,
+          background 0.25s ease,
+          transform 0.25s ease;
+      }
+
+      .terms-sidebar a i {
+        width: 16px;
+
+        color: var(--text-muted);
+        font-size: 11px;
+
+        transition: color 0.25s ease;
+      }
+
+      .terms-sidebar a:hover {
+        background: var(--accent-soft);
+        color: var(--white);
+
+        transform: translateX(3px);
+      }
+
+      .terms-sidebar a:hover i {
+        color: var(--accent-light);
+      }
+
+      /* ---------------------------------------------------------
+       CONTENT
+       --------------------------------------------------------- */
+
+      .terms-content {
+        min-width: 0;
+      }
+
+      .terms-section {
+        padding: 0 0 42px;
+        margin-bottom: 42px;
+
+        border-bottom: 1px solid var(--border);
+
+        scroll-margin-top: 110px;
+      }
+
+      .terms-section:last-child {
+        border-bottom: 0;
+        margin-bottom: 0;
+      }
+
+      .terms-section-number {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+
+        width: 30px;
+        height: 30px;
+        margin-bottom: 16px;
+
+        border: 1px solid rgba(124, 92, 255, 0.25);
+        border-radius: 9px;
+
+        background: var(--accent-soft);
+
+        color: var(--accent-light);
+
+        font-family: "Space Grotesk", sans-serif;
+        font-size: 12px;
+        font-weight: 700;
+      }
+
+      .terms-section h2 {
+        margin: 0 0 15px;
+
+        font-family: "Space Grotesk", sans-serif;
+        font-size: 25px;
+        letter-spacing: -0.025em;
+      }
+
+      .terms-section h3 {
+        margin: 26px 0 9px;
+
+        color: var(--text);
+
+        font-family: "Space Grotesk", sans-serif;
+        font-size: 16px;
+      }
+
+      .terms-section p {
+        margin: 0 0 14px;
+
+        color: var(--text-soft);
+
+        font-size: 15px;
+        line-height: 1.85;
+      }
+
+      .terms-section p:last-child {
+        margin-bottom: 0;
+      }
+
+      .terms-section ul {
+        display: grid;
+        gap: 10px;
+
+        margin: 18px 0 0;
+        padding: 0;
+
+        list-style: none;
+      }
+
+      .terms-section li {
+        position: relative;
+
+        padding-left: 25px;
+
+        color: var(--text-soft);
+
+        font-size: 15px;
+        line-height: 1.75;
+      }
+
+      .terms-section li::before {
+        content: "";
+
+        position: absolute;
+
+        top: 0.72em;
+        left: 4px;
+
+        width: 6px;
+        height: 6px;
+
+        border-radius: 50%;
+
+        background: var(--accent);
+
+        box-shadow: 0 0 12px rgba(124, 92, 255, 0.55);
+      }
+
+      /* ---------------------------------------------------------
+       HIGHLIGHT BOX
+       --------------------------------------------------------- */
+
+      .terms-highlight {
+        display: flex;
+        gap: 16px;
+
+        margin: 24px 0;
+        padding: 20px;
+
+        border: 1px solid rgba(124, 92, 255, 0.2);
+        border-radius: var(--radius-md);
+
+        background: linear-gradient(
+          135deg,
+          rgba(124, 92, 255, 0.1),
+          rgba(124, 92, 255, 0.03)
+        );
+      }
+
+      .terms-highlight-icon {
+        flex: 0 0 42px;
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        width: 42px;
+        height: 42px;
+
+        border-radius: 12px;
+
+        background: var(--accent-soft);
+
+        color: var(--accent-light);
+      }
+
+      .terms-highlight strong {
+        display: block;
+
+        margin-bottom: 5px;
+
+        color: var(--text);
+
+        font-family: "Space Grotesk", sans-serif;
+        font-size: 15px;
+      }
+
+      .terms-highlight p {
+        margin: 0;
+
+        font-size: 13px;
+        line-height: 1.7;
+      }
+
+      /* ---------------------------------------------------------
+       CTA
+       --------------------------------------------------------- */
+
+      .terms-contact {
+        margin-top: 70px;
+        padding: 38px;
+
+        border: 1px solid var(--border);
+        border-radius: var(--radius-lg);
+
+        background:
+          radial-gradient(
+            circle at top right,
+            rgba(124, 92, 255, 0.12),
+            transparent 45%
+          ),
+          var(--surface);
+      }
+
+      .terms-contact h2 {
+        margin: 0 0 10px;
+
+        font-family: "Space Grotesk", sans-serif;
+        font-size: 26px;
+        letter-spacing: -0.03em;
+      }
+
+      .terms-contact p {
+        max-width: 650px;
+        margin: 0 0 22px;
+
+        color: var(--text-soft);
+
+        font-size: 14px;
+        line-height: 1.75;
+      }
+
+      .terms-contact-actions {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 12px;
+      }
+
+      /* ---------------------------------------------------------
+       REVEAL
+       --------------------------------------------------------- */
+
+      .terms-page .reveal {
+        opacity: 0;
+
+        transform: translateY(18px);
+
+        transition:
+          opacity 0.65s ease,
+          transform 0.65s ease;
+      }
+
+      .terms-page .reveal.visible {
+        opacity: 1;
+
+        transform: translateY(0);
+      }
+
+      /* =========================================================
+       TABLET
+       ========================================================= */
+
+      @media (max-width: 900px) {
+        .terms-page {
+          padding-top: 125px;
+        }
+
+        .terms-layout {
+          grid-template-columns: 1fr;
+
+          gap: 30px;
+        }
+
+        .terms-sidebar {
+          position: static;
+
+          display: grid;
+          grid-template-columns: repeat(2, 1fr);
+
+          gap: 4px;
+        }
+
+        .terms-sidebar-label {
+          grid-column: 1 / -1;
+
+          margin-bottom: 7px;
+        }
+      }
+
+      /* =========================================================
+       MOBILE
+       ========================================================= */
+
+      @media (max-width: 650px) {
+        .terms-page {
+          padding-top: 100px;
+          padding-bottom: 65px;
+        }
+
+        .terms-hero {
+          margin-bottom: 50px;
+        }
+
+        .terms-hero h1 {
+          font-size: clamp(2.5rem, 13vw, 3.5rem);
+        }
+
+        .terms-hero p {
+          font-size: 15px;
+          line-height: 1.75;
+        }
+
+        .terms-sidebar {
+          grid-template-columns: 1fr;
+
+          padding: 16px;
+        }
+
+        .terms-section {
+          padding-bottom: 32px;
+          margin-bottom: 32px;
+        }
+
+        .terms-section h2 {
+          font-size: 22px;
+        }
+
+        .terms-section p,
+        .terms-section li {
+          font-size: 14px;
+        }
+
+        .terms-highlight {
+          padding: 17px;
+        }
+
+        .terms-contact {
+          margin-top: 50px;
+          padding: 25px 20px;
+        }
+
+        .terms-contact-actions {
+          flex-direction: column;
+        }
+
+        .terms-contact-actions .btn {
+          width: 100%;
+          justify-content: center;
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <!-- =========================================================
+       HEADER
+       ========================================================= -->
+
+    <header class="site-header">
+      <nav class="navbar container">
+        <a href="index.html" class="brand">
+          <span class="brand-mark">
+            <span></span>
+            <span></span>
+            <span></span>
+          </span>
+
+          <span class="brand-name"> QRLY </span>
+        </a>
+
+        <button
+          class="mobile-menu-toggle"
+          id="mobileMenuToggle"
+          aria-label="Toggle navigation"
+          aria-expanded="false"
+        >
+          <i class="fa-solid fa-bars"></i>
+        </button>
+
+        <div class="nav-links" id="navLinks">
+          <a href="index.html"> Home </a>
+
+          <a href="generator.html"> Generator </a>
+
+          <a href="features.html"> Features </a>
+
+          <a href="about.html"> About </a>
+
+          <a href="contact.html"> Contact </a>
+
+          <a href="generator.html" class="nav-cta">
+            Create QR
+            <i class="fa-solid fa-arrow-up-right-from-square"></i>
+          </a>
+        </div>
+      </nav>
+    </header>
+
+    <!-- =========================================================
+       TERMS PAGE
+       ========================================================= -->
+
+    <main class="terms-page">
+      <div class="container">
+        <!-- =======================================================
+           HERO
+           ======================================================= -->
+
+        <section class="terms-hero reveal">
+          <div class="terms-eyebrow">
+            <i class="fa-solid fa-file-contract"></i>
+
+            Terms of Service
+          </div>
+
+          <h1>Clear terms. <span>Simple rules.</span></h1>
+
+          <p>
+            These Terms of Service explain the rules for using QRLY, our QR code
+            generation tools, website, and related services. We have kept them
+            straightforward so you know what to expect.
+          </p>
+
+          <div class="last-updated">Last updated: September 2026</div>
+        </section>
+
+        <!-- =======================================================
+           LAYOUT
+           ======================================================= -->
+
+        <div class="terms-layout">
+          <!-- =====================================================
+             SIDEBAR
+             ===================================================== -->
+
+          <aside class="terms-sidebar reveal">
+            <div class="terms-sidebar-label">On this page</div>
+
+            <a href="#acceptance">
+              <i class="fa-solid fa-check"></i>
+              Acceptance
+            </a>
+
+            <a href="#using-qrly">
+              <i class="fa-solid fa-qrcode"></i>
+              Using QRLY
+            </a>
+
+            <a href="#user-content">
+              <i class="fa-solid fa-pen"></i>
+              Your content
+            </a>
+
+            <a href="#acceptable-use">
+              <i class="fa-solid fa-shield"></i>
+              Acceptable use
+            </a>
+
+            <a href="#downloads">
+              <i class="fa-solid fa-download"></i>
+              Downloads
+            </a>
+
+            <a href="#third-party">
+              <i class="fa-solid fa-arrow-up-right-from-square"></i>
+              Third parties
+            </a>
+
+            <a href="#availability">
+              <i class="fa-solid fa-server"></i>
+              Availability
+            </a>
+
+            <a href="#liability">
+              <i class="fa-solid fa-triangle-exclamation"></i>
+              Liability
+            </a>
+
+            <a href="#changes">
+              <i class="fa-solid fa-rotate"></i>
+              Changes
+            </a>
+          </aside>
+
+          <!-- =====================================================
+             TERMS CONTENT
+             ===================================================== -->
+
+          <div class="terms-content">
+            <!-- ===================================================
+               01 — ACCEPTANCE
+               =================================================== -->
+
+            <section class="terms-section reveal" id="acceptance">
+              <div class="terms-section-number">01</div>
+
+              <h2>Acceptance of these terms</h2>
+
+              <p>
+                By accessing or using QRLY, you acknowledge that you have read,
+                understood, and agree to be bound by these Terms of Service.
+              </p>
+
+              <p>
+                If you do not agree with these terms, please do not use QRLY or
+                its services.
+              </p>
+
+              <div class="terms-highlight">
+                <div class="terms-highlight-icon">
+                  <i class="fa-solid fa-circle-check"></i>
+                </div>
+
+                <div>
+                  <strong> Simple principle </strong>
+
+                  <p>
+                    Use QRLY responsibly, respect applicable laws, and don't use
+                    the service to harm others.
+                  </p>
+                </div>
+              </div>
+            </section>
+
+            <!-- ===================================================
+               02 — USING QRLY
+               =================================================== -->
+
+            <section class="terms-section reveal" id="using-qrly">
+              <div class="terms-section-number">02</div>
+
+              <h2>Using QRLY</h2>
+
+              <p>
+                QRLY provides browser-based tools for creating QR codes from
+                information supplied by the user.
+              </p>
+
+              <p>
+                You are responsible for ensuring that the information you enter
+                into QRLY is accurate, lawful, and appropriate for your intended
+                use.
+              </p>
+
+              <ul>
+                <li>
+                  You may use QRLY for personal or legitimate commercial
+                  purposes.
+                </li>
+
+                <li>
+                  You are responsible for the content you encode into your QR
+                  codes.
+                </li>
+
+                <li>You must comply with applicable laws and regulations.</li>
+
+                <li>
+                  You must not interfere with the normal operation or security
+                  of the website.
+                </li>
+              </ul>
+            </section>
+
+            <!-- ===================================================
+               03 — USER CONTENT
+               =================================================== -->
+
+            <section class="terms-section reveal" id="user-content">
+              <div class="terms-section-number">03</div>
+
+              <h2>Your content</h2>
+
+              <p>
+                QRLY allows you to create QR codes containing information that
+                you choose to provide. You retain responsibility for that
+                information.
+              </p>
+
+              <p>
+                QRLY does not claim ownership of the URLs, text, contact
+                details, Wi-Fi information, or other content that you enter into
+                the generator.
+              </p>
+
+              <h3>Your responsibility</h3>
+
+              <p>
+                You should only encode information that you have the right to
+                use and distribute. Do not use QRLY to create content that
+                violates another person's rights or applicable law.
+              </p>
+            </section>
+
+            <!-- ===================================================
+               04 — ACCEPTABLE USE
+               =================================================== -->
+
+            <section class="terms-section reveal" id="acceptable-use">
+              <div class="terms-section-number">04</div>
+
+              <h2>Acceptable use</h2>
+
+              <p>
+                You agree not to use QRLY in ways that could damage the service,
+                compromise security, or facilitate unlawful activity.
+              </p>
+
+              <p>Prohibited uses include, but are not limited to:</p>
+
+              <ul>
+                <li>
+                  Using QRLY to facilitate fraud, scams, phishing, or other
+                  deceptive activity.
+                </li>
+
+                <li>
+                  Creating QR codes intended to distribute malware or malicious
+                  software.
+                </li>
+
+                <li>
+                  Attempting to gain unauthorized access to QRLY, its
+                  infrastructure, or another user's information.
+                </li>
+
+                <li>
+                  Abusing automated requests in a way that disrupts the website
+                  or its services.
+                </li>
+
+                <li>
+                  Using the service to violate applicable laws, regulations, or
+                  third-party rights.
+                </li>
+              </ul>
+            </section>
+
+            <!-- ===================================================
+               05 — DOWNLOADS
+               =================================================== -->
+
+            <section class="terms-section reveal" id="downloads">
+              <div class="terms-section-number">05</div>
+
+              <h2>QR code downloads</h2>
+
+              <p>
+                QRLY may allow you to download generated QR codes in formats
+                such as PNG or SVG.
+              </p>
+
+              <p>
+                Once downloaded, you are responsible for how those files are
+                used, distributed, printed, published, or displayed.
+              </p>
+
+              <p>
+                QRLY does not guarantee that a downloaded QR code will remain
+                readable under every printing, resizing, lighting, scanning, or
+                environmental condition.
+              </p>
+            </section>
+
+            <!-- ===================================================
+               06 — THIRD PARTY
+               =================================================== -->
+
+            <section class="terms-section reveal" id="third-party">
+              <div class="terms-section-number">06</div>
+
+              <h2>Third-party services</h2>
+
+              <p>
+                QRLY may use third-party services to support certain website
+                functions, including hosting, content delivery, form processing,
+                fonts, icons, or other infrastructure.
+              </p>
+
+              <p>
+                These third-party services may have their own terms and privacy
+                policies. Your use of those services may therefore be subject to
+                their respective policies.
+              </p>
+
+              <p>
+                QRLY is not responsible for the independent operation,
+                availability, or policies of third-party services.
+              </p>
+            </section>
+
+            <!-- ===================================================
+               07 — AVAILABILITY
+               =================================================== -->
+
+            <section class="terms-section reveal" id="availability">
+              <div class="terms-section-number">07</div>
+
+              <h2>Service availability</h2>
+
+              <p>
+                We aim to keep QRLY available, reliable, and useful. However, we
+                do not guarantee that the website or any individual feature will
+                always be available or uninterrupted.
+              </p>
+
+              <p>
+                QRLY may occasionally need to be modified, updated, temporarily
+                unavailable, or discontinued for maintenance, technical reasons,
+                security reasons, or other legitimate purposes.
+              </p>
+
+              <p>
+                We may also change or improve features over time without
+                guaranteeing that a particular feature will remain available
+                indefinitely.
+              </p>
+            </section>
+
+            <!-- ===================================================
+               08 — DISCLAIMER
+               =================================================== -->
+
+            <section class="terms-section reveal" id="liability">
+              <div class="terms-section-number">08</div>
+
+              <h2>Disclaimer and liability</h2>
+
+              <p>
+                QRLY is provided on an "as is" and "as available" basis to the
+                extent permitted by applicable law.
+              </p>
+
+              <p>
+                While we aim to provide accurate and dependable tools, we cannot
+                guarantee that QR codes generated through the service will work
+                perfectly in every environment or with every scanning device.
+              </p>
+
+              <p>
+                To the maximum extent permitted by applicable law, QRLY and its
+                operators will not be responsible for indirect, incidental,
+                consequential, or special losses resulting from your use of, or
+                inability to use, the service.
+              </p>
+
+              <div class="terms-highlight">
+                <div class="terms-highlight-icon">
+                  <i class="fa-solid fa-triangle-exclamation"></i>
+                </div>
+
+                <div>
+                  <strong> Use appropriate judgment </strong>
+
+                  <p>
+                    Before publishing or printing an important QR code, always
+                    scan and test it yourself.
+                  </p>
+                </div>
+              </div>
+            </section>
+
+            <!-- ===================================================
+               09 — CHANGES
+               =================================================== -->
+
+            <section class="terms-section reveal" id="changes">
+              <div class="terms-section-number">09</div>
+
+              <h2>Changes to these terms</h2>
+
+              <p>
+                We may update these Terms of Service when necessary to reflect
+                changes to QRLY, its features, or applicable requirements.
+              </p>
+
+              <p>
+                Updated terms will be published on this page and the "Last
+                updated" date will be revised accordingly.
+              </p>
+
+              <p>
+                Your continued use of QRLY after updated terms are published
+                constitutes acceptance of the revised terms, to the extent
+                permitted by applicable law.
+              </p>
+            </section>
+
+            <!-- ===================================================
+               10 — CONTACT
+               =================================================== -->
+
+            <section class="terms-section reveal" id="contact">
+              <div class="terms-section-number">10</div>
+
+              <h2>Contact</h2>
+
+              <p>
+                If you have questions about these Terms of Service, you can
+                contact us through the QRLY contact page.
+              </p>
+
+              <p>
+                We welcome questions about how the service works, appropriate
+                use, or anything else related to QRLY.
+              </p>
+            </section>
+
+            <!-- ===================================================
+               FINAL CTA
+               =================================================== -->
+
+            <section class="terms-contact reveal">
+              <h2>Ready to create something?</h2>
+
+              <p>
+                Now that you've seen the rules, let's get back to what QRLY was
+                built for — creating clean, useful QR codes without unnecessary
+                friction.
+              </p>
+
+              <div class="terms-contact-actions">
+                <a href="generator.html" class="btn btn-primary">
+                  Create a QR
+                  <i class="fa-solid fa-arrow-right"></i>
+                </a>
+
+                <a href="contact.html" class="btn btn-secondary">
+                  Contact us
+                  <i class="fa-solid fa-message"></i>
+                </a>
+              </div>
+            </section>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <!-- =========================================================
+       FOOTER
+       ========================================================= -->
+
+    <footer class="site-footer">
+      <div class="container">
+        <div class="footer-main">
+          <div class="footer-brand">
+            <a href="index.html" class="brand">
+              <span class="brand-mark">
+                <span></span>
+                <span></span>
+                <span></span>
+              </span>
+
+              <span class="brand-name"> QRLY </span>
+            </a>
+
+            <p>Create. Customize. Connect.</p>
+
+            <span class="footer-location"> Built for the web · 2026 </span>
+          </div>
+
+          <div class="footer-links-group">
+            <div class="footer-column">
+              <h4>Product</h4>
+
+              <a href="generator.html"> Generator </a>
+
+              <a href="features.html"> Features </a>
+
+              <a href="about.html"> About </a>
+            </div>
+
+            <div class="footer-column">
+              <h4>Company</h4>
+
+              <a href="contact.html"> Contact </a>
+
+              <a href="privacy.html"> Privacy </a>
+
+              <a href="terms.html" class="active"> Terms </a>
+            </div>
+          </div>
+        </div>
+
+        <div class="footer-bottom">
+          <span> © 2026 QRLY. All rights reserved. </span>
+
+          <span> Crafted with precision. </span>
+        </div>
+      </div>
+    </footer>
+
+    <!-- =========================================================
+       JAVASCRIPT
+       ========================================================= -->
+
+    <script>
+      /* =========================================================
+       MOBILE NAVIGATION
+       ========================================================= */
+
+      const mobileMenuToggle = document.getElementById("mobileMenuToggle");
+
+      const navLinks = document.getElementById("navLinks");
+
+      if (mobileMenuToggle && navLinks) {
+        mobileMenuToggle.addEventListener("click", () => {
+          const isOpen = navLinks.classList.toggle("open");
+
+          mobileMenuToggle.setAttribute("aria-expanded", isOpen);
+
+          mobileMenuToggle.innerHTML = isOpen
+            ? '<i class="fa-solid fa-xmark"></i>'
+            : '<i class="fa-solid fa-bars"></i>';
+        });
+
+        document.querySelectorAll(".nav-links a").forEach((link) => {
+          link.addEventListener("click", () => {
+            navLinks.classList.remove("open");
+
+            mobileMenuToggle.setAttribute("aria-expanded", "false");
+
+            mobileMenuToggle.innerHTML = '<i class="fa-solid fa-bars"></i>';
+          });
+        });
+      }
+
+      /* =========================================================
+       SCROLL REVEAL
+       ========================================================= */
+
+      const revealElements = document.querySelectorAll(".reveal");
+
+      if ("IntersectionObserver" in window) {
+        const revealObserver = new IntersectionObserver(
+          (entries, observer) => {
+            entries.forEach((entry) => {
+              if (entry.isIntersecting) {
+                entry.target.classList.add("visible");
+
+                observer.unobserve(entry.target);
+              }
+            });
+          },
+          {
+            threshold: 0.12,
+          },
+        );
+
+        revealElements.forEach((element) => {
+          revealObserver.observe(element);
+        });
+      } else {
+        revealElements.forEach((element) => {
+          element.classList.add("visible");
+        });
+      }
+    </script>
+  </body>
+</html>

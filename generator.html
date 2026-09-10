@@ -1,0 +1,446 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <meta
+      name="description"
+      content="Create, customize and download beautiful QR codes with QRLY."
+    />
+
+    <meta name="theme-color" content="#080a0f" />
+
+    <title>QR Generator — QRLY</title>
+
+    <link rel="icon" type="image/svg+xml" href="./assets/qrly.svg" />
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Font Awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    />
+
+    <!-- QR Code Library -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
+
+    <!-- Main Styles -->
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+
+  <body>
+    <!-- ================= HEADER ================= -->
+
+    <header class="site-header">
+      <nav class="navbar container">
+        <a href="index.html" class="brand">
+          <span class="brand-mark">
+            <span></span>
+            <span></span>
+            <span></span>
+          </span>
+
+          <span class="brand-name">QRLY</span>
+        </a>
+
+        <button
+          class="mobile-menu-toggle"
+          id="mobileMenuToggle"
+          aria-label="Toggle navigation"
+          aria-expanded="false"
+        >
+          <i class="fa-solid fa-bars"></i>
+        </button>
+
+        <div class="nav-links" id="navLinks">
+          <a href="index.html"> Home </a>
+
+          <a href="generator.html" class="active"> Generator </a>
+
+          <a href="features.html"> Features </a>
+
+          <a href="about.html"> About </a>
+
+          <a href="contact.html"> Contact </a>
+
+          <a href="generator.html" class="nav-cta">
+            Create QR
+            <i class="fa-solid fa-arrow-up-right-from-square"></i>
+          </a>
+        </div>
+      </nav>
+    </header>
+
+    <!-- ================= MAIN ================= -->
+
+    <main>
+      <!-- ================= GENERATOR ================= -->
+
+      <section class="generator-page">
+        <div class="container">
+          <!-- PAGE INTRO -->
+
+          <div class="generator-intro reveal">
+            <div class="eyebrow">
+              <span></span>
+              QR CODE GENERATOR
+            </div>
+
+            <h1>
+              Create a QR code.
+              <span>Make it yours.</span>
+            </h1>
+
+            <p>
+              Choose what you want to share, customize the look, and download
+              your QR code instantly.
+            </p>
+          </div>
+
+          <!-- ================= WORKSPACE ================= -->
+
+          <div class="qr-workspace reveal">
+            <!-- ================= LEFT SETTINGS ================= -->
+
+            <div class="qr-settings">
+              <div class="workspace-heading">
+                <div>
+                  <span class="workspace-label"> 01 </span>
+
+                  <h2>Choose what to share</h2>
+                </div>
+              </div>
+
+              <!-- QR TYPES -->
+
+              <div class="qr-tabs">
+                <button class="qr-tab active" data-type="url">
+                  <i class="fa-solid fa-link"></i>
+                  <span>URL</span>
+                </button>
+
+                <button class="qr-tab" data-type="text">
+                  <i class="fa-solid fa-align-left"></i>
+                  <span>Text</span>
+                </button>
+
+                <button class="qr-tab" data-type="email">
+                  <i class="fa-solid fa-envelope"></i>
+                  <span>Email</span>
+                </button>
+
+                <button class="qr-tab" data-type="phone">
+                  <i class="fa-solid fa-phone"></i>
+                  <span>Phone</span>
+                </button>
+
+                <button class="qr-tab" data-type="wifi">
+                  <i class="fa-solid fa-wifi"></i>
+                  <span>Wi-Fi</span>
+                </button>
+
+                <button class="qr-tab" data-type="vcard">
+                  <i class="fa-solid fa-address-card"></i>
+                  <span>vCard</span>
+                </button>
+              </div>
+
+              <!-- DYNAMIC FIELDS -->
+
+              <div id="dynamicFields" class="qr-fields">
+                <label for="qrInput"> Website URL </label>
+
+                <input
+                  type="url"
+                  id="qrInput"
+                  placeholder="https://example.com"
+                  value="https://qrly.app"
+                />
+
+                <small>
+                  Add the website or page you want people to open.
+                </small>
+              </div>
+
+              <!-- DIVIDER -->
+
+              <div class="workspace-divider"></div>
+
+              <!-- CUSTOMIZATION -->
+
+              <div class="workspace-heading">
+                <div>
+                  <span class="workspace-label"> 02 </span>
+
+                  <h2>Customize your code</h2>
+                </div>
+              </div>
+
+              <!-- COLORS -->
+
+              <div class="custom-row">
+                <div class="custom-item">
+                  <span> Foreground </span>
+
+                  <label class="qr-color">
+                    <input type="color" id="foregroundColor" value="#111111" />
+
+                    <strong id="foregroundValue"> #111111 </strong>
+                  </label>
+                </div>
+
+                <div class="custom-item">
+                  <span> Background </span>
+
+                  <label class="qr-color">
+                    <input type="color" id="backgroundColor" value="#ffffff" />
+
+                    <strong id="backgroundValue"> #FFFFFF </strong>
+                  </label>
+                </div>
+              </div>
+
+              <!-- SIZE -->
+
+              <div class="size-control">
+                <div class="size-top">
+                  <span> Size </span>
+
+                  <strong id="sizeValue"> 280px </strong>
+                </div>
+
+                <input
+                  type="range"
+                  id="qrSize"
+                  min="180"
+                  max="400"
+                  value="280"
+                />
+              </div>
+
+              <!-- ERROR CORRECTION -->
+
+              <div class="correction-control">
+                <span> Error correction </span>
+
+                <div class="correction-options">
+                  <button class="correction active" data-level="M">M</button>
+
+                  <button class="correction" data-level="L">L</button>
+
+                  <button class="correction" data-level="Q">Q</button>
+
+                  <button class="correction" data-level="H">H</button>
+                </div>
+              </div>
+
+              <!-- LOGO -->
+
+              <div class="logo-control">
+                <div class="logo-control-top">
+                  <span>
+                    Logo
+                    <small>Optional</small>
+                  </span>
+                </div>
+
+                <label class="logo-upload">
+                  <input
+                    type="file"
+                    id="logoUpload"
+                    accept="image/png,image/jpeg,image/webp"
+                    hidden
+                  />
+
+                  <i class="fa-solid fa-image"></i>
+
+                  <span>
+                    Add a logo
+                    <small> PNG, JPG or WEBP </small>
+                  </span>
+
+                  <i class="fa-solid fa-plus"></i>
+                </label>
+
+                <div id="logoPreview" class="logo-file hidden">
+                  <img id="logoImage" alt="Logo preview" />
+
+                  <span id="logoName"></span>
+
+                  <button
+                    id="removeLogo"
+                    type="button"
+                    aria-label="Remove logo"
+                  >
+                    <i class="fa-solid fa-xmark"></i>
+                  </button>
+                </div>
+              </div>
+
+              <!-- RESET -->
+
+              <button type="button" id="resetGenerator" class="reset-generator">
+                <i class="fa-solid fa-arrow-rotate-left"></i>
+
+                Reset
+              </button>
+            </div>
+
+            <!-- ================= RIGHT PREVIEW ================= -->
+
+            <div class="qr-preview">
+              <div class="preview-heading">
+                <div>
+                  <span class="workspace-label"> 03 </span>
+
+                  <h2>Your QR code</h2>
+                </div>
+
+                <span class="preview-status"> Ready </span>
+              </div>
+
+              <!-- PREVIEW -->
+
+              <div class="preview-area">
+                <div class="qr-paper">
+                  <div id="qrcode"></div>
+
+                  <div id="qrLogoOverlay" class="qr-logo-overlay hidden">
+                    <img id="qrLogoOverlayImage" alt="" />
+                  </div>
+                </div>
+
+                <p>Scan with your phone camera</p>
+              </div>
+
+              <!-- DOWNLOAD ACTIONS -->
+
+              <div class="qr-actions">
+                <button
+                  id="downloadPng"
+                  class="qr-download primary"
+                  type="button"
+                >
+                  <i class="fa-solid fa-download"></i>
+
+                  Download PNG
+                </button>
+
+                <button id="downloadSvg" class="qr-download" type="button">
+                  <i class="fa-solid fa-file-code"></i>
+
+                  SVG
+                </button>
+              </div>
+
+              <!-- PRIVACY -->
+
+              <div class="privacy-note">
+                <i class="fa-solid fa-lock"></i>
+
+                <span>
+                  Generated locally in your browser. Your data isn't uploaded.
+                </span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ================= BOTTOM MESSAGE ================= -->
+
+      <section class="generator-bottom">
+        <div class="container">
+          <div class="generator-bottom-content reveal">
+            <span class="eyebrow">
+              <span></span>
+
+              SIMPLE BY DESIGN
+            </span>
+
+            <h2>
+              From idea to
+              <span>scannable.</span>
+            </h2>
+
+            <p>
+              No account. No complicated setup. Just create, customize and
+              connect.
+            </p>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- ================= FOOTER ================= -->
+
+    <footer class="site-footer">
+      <div class="container">
+        <div class="footer-main">
+          <!-- FOOTER BRAND -->
+
+          <div class="footer-brand">
+            <a href="index.html" class="brand">
+              <span class="brand-mark">
+                <span></span>
+                <span></span>
+                <span></span>
+              </span>
+
+              <span class="brand-name"> QRLY </span>
+            </a>
+
+            <p>Create. Customize. Connect.</p>
+
+            <span class="footer-location"> Built for the web · 2026 </span>
+          </div>
+
+          <!-- FOOTER LINKS -->
+
+          <div class="footer-links-group">
+            <div class="footer-column">
+              <h4>Product</h4>
+
+              <a href="generator.html"> Generator </a>
+
+              <a href="features.html"> Features </a>
+
+              <a href="about.html"> About </a>
+            </div>
+
+            <div class="footer-column">
+              <h4>Company</h4>
+
+              <a href="contact.html"> Contact </a>
+
+              <a href="privacy.html"> Privacy </a>
+
+              <a href="terms.html"> Terms </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- FOOTER BOTTOM -->
+
+        <div class="footer-bottom">
+          <span> © 2026 QRLY. All rights reserved. </span>
+
+          <span> Crafted with precision. </span>
+        </div>
+      </div>
+    </footer>
+
+    <!-- APP JS -->
+
+    <script src="js/app.js"></script>
+  </body>
+</html>

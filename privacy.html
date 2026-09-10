@@ -1,0 +1,1132 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Privacy Policy — QRLY</title>
+    <link rel="icon" type="image/svg+xml" href="./assets/qrly.svg" />
+
+    <meta
+      name="description"
+      content="Read the QRLY Privacy Policy and learn how information is handled when you use our QR code tools and website."
+    />
+
+    <meta name="robots" content="index, follow" />
+
+    <link rel="canonical" href="privacy.html" />
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Font Awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    />
+
+    <!-- Master Styles -->
+    <link rel="stylesheet" href="css/style.css" />
+
+    <style>
+      /* =========================================================
+       QRLY PRIVACY PAGE
+       ========================================================= */
+
+      .privacy-page {
+        padding-top: 150px;
+        padding-bottom: 100px;
+      }
+
+      /* ---------------------------------------------------------
+       HERO
+       --------------------------------------------------------- */
+
+      .privacy-hero {
+        max-width: 850px;
+        margin: 0 auto 70px;
+        text-align: center;
+      }
+
+      .privacy-eyebrow {
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        padding: 8px 13px;
+        margin-bottom: 22px;
+
+        border: 1px solid var(--border);
+        border-radius: 999px;
+
+        background: rgba(124, 92, 255, 0.08);
+
+        color: var(--accent-light);
+        font-size: 12px;
+        font-weight: 700;
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+      }
+
+      .privacy-eyebrow i {
+        font-size: 11px;
+      }
+
+      .privacy-hero h1 {
+        margin: 0 0 20px;
+
+        font-family: "Space Grotesk", sans-serif;
+        font-size: clamp(2.8rem, 6vw, 5rem);
+        line-height: 0.98;
+        letter-spacing: -0.055em;
+      }
+
+      .privacy-hero h1 span {
+        background: linear-gradient(135deg, var(--white), var(--accent-light));
+
+        -webkit-background-clip: text;
+        background-clip: text;
+        -webkit-text-fill-color: transparent;
+      }
+
+      .privacy-hero p {
+        max-width: 650px;
+        margin: 0 auto;
+
+        color: var(--text-soft);
+        font-size: 17px;
+        line-height: 1.8;
+      }
+
+      .last-updated {
+        margin-top: 20px;
+
+        color: var(--text-muted);
+        font-size: 13px;
+      }
+
+      /* ---------------------------------------------------------
+       CONTENT LAYOUT
+       --------------------------------------------------------- */
+
+      .privacy-layout {
+        display: grid;
+        grid-template-columns: 230px minmax(0, 1fr);
+        gap: 55px;
+        align-items: start;
+      }
+
+      /* ---------------------------------------------------------
+       SIDEBAR
+       --------------------------------------------------------- */
+
+      .privacy-sidebar {
+        position: sticky;
+        top: 105px;
+
+        padding: 20px;
+
+        border: 1px solid var(--border);
+        border-radius: var(--radius-lg);
+
+        background: rgba(17, 21, 29, 0.7);
+        backdrop-filter: blur(18px);
+      }
+
+      .privacy-sidebar-label {
+        margin-bottom: 14px;
+
+        color: var(--text-muted);
+        font-size: 11px;
+        font-weight: 700;
+        letter-spacing: 0.1em;
+        text-transform: uppercase;
+      }
+
+      .privacy-sidebar a {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+
+        padding: 9px 10px;
+
+        border-radius: 9px;
+
+        color: var(--text-soft);
+        font-size: 13px;
+        text-decoration: none;
+
+        transition:
+          color 0.25s ease,
+          background 0.25s ease,
+          transform 0.25s ease;
+      }
+
+      .privacy-sidebar a i {
+        width: 16px;
+
+        color: var(--text-muted);
+        font-size: 11px;
+
+        transition: color 0.25s ease;
+      }
+
+      .privacy-sidebar a:hover {
+        background: var(--accent-soft);
+        color: var(--white);
+        transform: translateX(3px);
+      }
+
+      .privacy-sidebar a:hover i {
+        color: var(--accent-light);
+      }
+
+      /* ---------------------------------------------------------
+       POLICY CONTENT
+       --------------------------------------------------------- */
+
+      .privacy-content {
+        min-width: 0;
+      }
+
+      .privacy-section {
+        padding: 0 0 42px;
+        margin-bottom: 42px;
+
+        border-bottom: 1px solid var(--border);
+        scroll-margin-top: 110px;
+      }
+
+      .privacy-section:last-child {
+        border-bottom: 0;
+        margin-bottom: 0;
+      }
+
+      .privacy-section-number {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+
+        width: 30px;
+        height: 30px;
+        margin-bottom: 16px;
+
+        border: 1px solid rgba(124, 92, 255, 0.25);
+        border-radius: 9px;
+
+        background: var(--accent-soft);
+
+        color: var(--accent-light);
+        font-family: "Space Grotesk", sans-serif;
+        font-size: 12px;
+        font-weight: 700;
+      }
+
+      .privacy-section h2 {
+        margin: 0 0 15px;
+
+        font-family: "Space Grotesk", sans-serif;
+        font-size: 25px;
+        letter-spacing: -0.025em;
+      }
+
+      .privacy-section h3 {
+        margin: 26px 0 9px;
+
+        color: var(--text);
+        font-family: "Space Grotesk", sans-serif;
+        font-size: 16px;
+      }
+
+      .privacy-section p {
+        margin: 0 0 14px;
+
+        color: var(--text-soft);
+        font-size: 15px;
+        line-height: 1.85;
+      }
+
+      .privacy-section p:last-child {
+        margin-bottom: 0;
+      }
+
+      .privacy-section ul {
+        display: grid;
+        gap: 10px;
+
+        margin: 18px 0 0;
+        padding: 0;
+
+        list-style: none;
+      }
+
+      .privacy-section li {
+        position: relative;
+
+        padding-left: 25px;
+
+        color: var(--text-soft);
+        font-size: 15px;
+        line-height: 1.75;
+      }
+
+      .privacy-section li::before {
+        content: "";
+
+        position: absolute;
+        top: 0.72em;
+        left: 4px;
+
+        width: 6px;
+        height: 6px;
+
+        border-radius: 50%;
+
+        background: var(--accent);
+        box-shadow: 0 0 12px rgba(124, 92, 255, 0.55);
+      }
+
+      /* ---------------------------------------------------------
+       HIGHLIGHT BOX
+       --------------------------------------------------------- */
+
+      .privacy-highlight {
+        display: flex;
+        gap: 16px;
+
+        margin: 24px 0;
+        padding: 20px;
+
+        border: 1px solid rgba(124, 92, 255, 0.2);
+        border-radius: var(--radius-md);
+
+        background: linear-gradient(
+          135deg,
+          rgba(124, 92, 255, 0.1),
+          rgba(124, 92, 255, 0.03)
+        );
+      }
+
+      .privacy-highlight-icon {
+        flex: 0 0 42px;
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        width: 42px;
+        height: 42px;
+
+        border-radius: 12px;
+
+        background: var(--accent-soft);
+
+        color: var(--accent-light);
+      }
+
+      .privacy-highlight strong {
+        display: block;
+        margin-bottom: 5px;
+
+        color: var(--text);
+        font-family: "Space Grotesk", sans-serif;
+        font-size: 15px;
+      }
+
+      .privacy-highlight p {
+        margin: 0;
+
+        font-size: 13px;
+        line-height: 1.7;
+      }
+
+      /* ---------------------------------------------------------
+       CONTACT CTA
+       --------------------------------------------------------- */
+
+      .privacy-contact {
+        margin-top: 70px;
+        padding: 38px;
+
+        border: 1px solid var(--border);
+        border-radius: var(--radius-lg);
+
+        background:
+          radial-gradient(
+            circle at top right,
+            rgba(124, 92, 255, 0.12),
+            transparent 45%
+          ),
+          var(--surface);
+      }
+
+      .privacy-contact h2 {
+        margin: 0 0 10px;
+
+        font-family: "Space Grotesk", sans-serif;
+        font-size: 26px;
+        letter-spacing: -0.03em;
+      }
+
+      .privacy-contact p {
+        max-width: 650px;
+        margin: 0 0 22px;
+
+        color: var(--text-soft);
+        font-size: 14px;
+        line-height: 1.75;
+      }
+
+      .privacy-contact-actions {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 12px;
+      }
+
+      /* ---------------------------------------------------------
+       REVEAL ANIMATION
+       --------------------------------------------------------- */
+
+      .privacy-page .reveal {
+        opacity: 0;
+        transform: translateY(18px);
+
+        transition:
+          opacity 0.65s ease,
+          transform 0.65s ease;
+      }
+
+      .privacy-page .reveal.visible {
+        opacity: 1;
+        transform: translateY(0);
+      }
+
+      /* =========================================================
+       TABLET
+       ========================================================= */
+
+      @media (max-width: 900px) {
+        .privacy-page {
+          padding-top: 125px;
+        }
+
+        .privacy-layout {
+          grid-template-columns: 1fr;
+          gap: 30px;
+        }
+
+        .privacy-sidebar {
+          position: static;
+
+          display: grid;
+          grid-template-columns: repeat(2, 1fr);
+          gap: 4px;
+        }
+
+        .privacy-sidebar-label {
+          grid-column: 1 / -1;
+          margin-bottom: 7px;
+        }
+      }
+
+      /* =========================================================
+       MOBILE
+       ========================================================= */
+
+      @media (max-width: 650px) {
+        .privacy-page {
+          padding-top: 100px;
+          padding-bottom: 65px;
+        }
+
+        .privacy-hero {
+          margin-bottom: 50px;
+        }
+
+        .privacy-hero h1 {
+          font-size: clamp(2.5rem, 13vw, 3.5rem);
+        }
+
+        .privacy-hero p {
+          font-size: 15px;
+          line-height: 1.75;
+        }
+
+        .privacy-sidebar {
+          grid-template-columns: 1fr;
+          padding: 16px;
+        }
+
+        .privacy-section {
+          padding-bottom: 32px;
+          margin-bottom: 32px;
+        }
+
+        .privacy-section h2 {
+          font-size: 22px;
+        }
+
+        .privacy-section p,
+        .privacy-section li {
+          font-size: 14px;
+        }
+
+        .privacy-highlight {
+          padding: 17px;
+        }
+
+        .privacy-contact {
+          margin-top: 50px;
+          padding: 25px 20px;
+        }
+
+        .privacy-contact-actions {
+          flex-direction: column;
+        }
+
+        .privacy-contact-actions .btn {
+          width: 100%;
+          justify-content: center;
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <!-- =========================================================
+       HEADER
+       ========================================================= -->
+
+    <header class="site-header">
+      <nav class="navbar container">
+        <a href="index.html" class="brand">
+          <span class="brand-mark">
+            <span></span>
+            <span></span>
+            <span></span>
+          </span>
+
+          <span class="brand-name">QRLY</span>
+        </a>
+
+        <button
+          class="mobile-menu-toggle"
+          id="mobileMenuToggle"
+          aria-label="Toggle navigation"
+          aria-expanded="false"
+        >
+          <i class="fa-solid fa-bars"></i>
+        </button>
+
+        <div class="nav-links" id="navLinks">
+          <a href="index.html"> Home </a>
+
+          <a href="generator.html"> Generator </a>
+
+          <a href="features.html"> Features </a>
+
+          <a href="about.html"> About </a>
+
+          <a href="contact.html"> Contact </a>
+
+          <a href="generator.html" class="nav-cta">
+            Create QR
+            <i class="fa-solid fa-arrow-up-right-from-square"></i>
+          </a>
+        </div>
+      </nav>
+    </header>
+
+    <!-- =========================================================
+       PRIVACY PAGE
+       ========================================================= -->
+
+    <main class="privacy-page">
+      <div class="container">
+        <!-- =======================================================
+           HERO
+           ======================================================= -->
+
+        <section class="privacy-hero reveal">
+          <div class="privacy-eyebrow">
+            <i class="fa-solid fa-shield-halved"></i>
+            Privacy Policy
+          </div>
+
+          <h1>Your privacy <span>matters.</span></h1>
+
+          <p>
+            QRLY is built to make QR code creation simple, useful, and
+            respectful of your information. This policy explains what
+            information may be collected, how it is used, and what you can
+            expect when using QRLY.
+          </p>
+
+          <div class="last-updated">Last updated: September 2026</div>
+        </section>
+
+        <!-- =======================================================
+           CONTENT
+           ======================================================= -->
+
+        <div class="privacy-layout">
+          <!-- =====================================================
+             SIDEBAR
+             ===================================================== -->
+
+          <aside class="privacy-sidebar reveal">
+            <div class="privacy-sidebar-label">On this page</div>
+
+            <a href="#overview">
+              <i class="fa-solid fa-circle-info"></i>
+              Overview
+            </a>
+
+            <a href="#information">
+              <i class="fa-solid fa-database"></i>
+              Information
+            </a>
+
+            <a href="#qr-data">
+              <i class="fa-solid fa-qrcode"></i>
+              QR data
+            </a>
+
+            <a href="#usage">
+              <i class="fa-solid fa-chart-simple"></i>
+              How we use it
+            </a>
+
+            <a href="#third-party">
+              <i class="fa-solid fa-arrow-up-right-from-square"></i>
+              Third parties
+            </a>
+
+            <a href="#security">
+              <i class="fa-solid fa-lock"></i>
+              Security
+            </a>
+
+            <a href="#choices">
+              <i class="fa-solid fa-sliders"></i>
+              Your choices
+            </a>
+
+            <a href="#updates">
+              <i class="fa-solid fa-rotate"></i>
+              Updates
+            </a>
+          </aside>
+
+          <!-- =====================================================
+             POLICY
+             ===================================================== -->
+
+          <div class="privacy-content">
+            <!-- ===================================================
+               01 — OVERVIEW
+               =================================================== -->
+
+            <section class="privacy-section reveal" id="overview">
+              <div class="privacy-section-number">01</div>
+
+              <h2>Overview</h2>
+
+              <p>
+                Welcome to QRLY. By using this website and its QR code
+                generation tools, you agree to the practices described in this
+                Privacy Policy.
+              </p>
+
+              <p>
+                QRLY is designed primarily as a browser-based utility. Our goal
+                is to minimize unnecessary data collection while providing a
+                reliable and useful QR code generation experience.
+              </p>
+
+              <div class="privacy-highlight">
+                <div class="privacy-highlight-icon">
+                  <i class="fa-solid fa-shield"></i>
+                </div>
+
+                <div>
+                  <strong> Privacy-minded by design </strong>
+
+                  <p>
+                    QR generation is performed in your browser whenever
+                    possible, reducing the need to send QR content to a remote
+                    server.
+                  </p>
+                </div>
+              </div>
+            </section>
+
+            <!-- ===================================================
+               02 — INFORMATION
+               =================================================== -->
+
+            <section class="privacy-section reveal" id="information">
+              <div class="privacy-section-number">02</div>
+
+              <h2>Information we may collect</h2>
+
+              <p>
+                QRLY does not require you to create an account simply to
+                generate a QR code. Depending on how you interact with the
+                website, certain information may nevertheless be processed.
+              </p>
+
+              <h3>Information you provide</h3>
+
+              <p>
+                If you contact us through the contact form, you may provide
+                information such as:
+              </p>
+
+              <ul>
+                <li>Your name</li>
+                <li>Your email address</li>
+                <li>Your message subject</li>
+                <li>The contents of your message</li>
+              </ul>
+
+              <h3>Technical information</h3>
+
+              <p>
+                Basic technical information may be processed by hosting,
+                security, analytics, or third-party services used to operate and
+                improve the website. This can include information such as
+                browser type, device type, approximate usage information, and
+                technical logs.
+              </p>
+            </section>
+
+            <!-- ===================================================
+               03 — QR DATA
+               =================================================== -->
+
+            <section class="privacy-section reveal" id="qr-data">
+              <div class="privacy-section-number">03</div>
+
+              <h2>QR codes and generated data</h2>
+
+              <p>
+                QRLY allows you to enter information such as URLs, text, email
+                addresses, phone numbers, Wi-Fi details, and contact information
+                to create QR codes.
+              </p>
+
+              <p>
+                For normal QR generation, this information is processed by the
+                browser to construct the QR code. The QR content is not
+                inherently sent to QRLY's servers simply because you generated a
+                QR code.
+              </p>
+
+              <div class="privacy-highlight">
+                <div class="privacy-highlight-icon">
+                  <i class="fa-solid fa-qrcode"></i>
+                </div>
+
+                <div>
+                  <strong> Your QR content stays with your workflow </strong>
+
+                  <p>
+                    QRLY's client-side generator is designed so that ordinary QR
+                    creation can happen directly in your browser.
+                  </p>
+                </div>
+              </div>
+
+              <p>
+                Keep in mind that once a QR code is scanned, the information
+                encoded inside it may be accessible to the person or device
+                performing the scan. Avoid placing sensitive information into QR
+                codes unless you understand the risks involved.
+              </p>
+            </section>
+
+            <!-- ===================================================
+               04 — USAGE
+               =================================================== -->
+
+            <section class="privacy-section reveal" id="usage">
+              <div class="privacy-section-number">04</div>
+
+              <h2>How information is used</h2>
+
+              <p>
+                Information processed through QRLY may be used for legitimate
+                purposes connected to operating and improving the website.
+              </p>
+
+              <ul>
+                <li>To provide and maintain QRLY's tools and website.</li>
+
+                <li>To respond to messages and support requests.</li>
+
+                <li>To identify and resolve technical problems.</li>
+
+                <li>To improve usability, performance, and reliability.</li>
+
+                <li>
+                  To protect the website against abuse, spam, or security
+                  threats.
+                </li>
+              </ul>
+
+              <p style="margin-top: 18px">
+                We do not use the information you enter into the QR generator as
+                a reason to build a personal advertising profile about you.
+              </p>
+            </section>
+
+            <!-- ===================================================
+               05 — CONTACT FORM
+               =================================================== -->
+
+            <section class="privacy-section reveal" id="contact-data">
+              <div class="privacy-section-number">05</div>
+
+              <h2>Contact form submissions</h2>
+
+              <p>
+                When you send a message through the QRLY contact form, your
+                submission is processed through our form service provider,
+                Formspree.
+              </p>
+
+              <p>
+                This means information included in your message, including your
+                name, email address, subject, and message, may be transmitted to
+                and processed by Formspree in order to deliver the submission.
+              </p>
+
+              <p>
+                We use this information to review and respond to your inquiry.
+                We do not ask you to submit passwords, payment information,
+                government identification, or other unnecessary sensitive
+                information through the contact form.
+              </p>
+            </section>
+
+            <!-- ===================================================
+               06 — THIRD PARTY
+               =================================================== -->
+
+            <section class="privacy-section reveal" id="third-party">
+              <div class="privacy-section-number">06</div>
+
+              <h2>Third-party services</h2>
+
+              <p>
+                QRLY may rely on third-party services to provide certain website
+                functionality, infrastructure, or communication features.
+              </p>
+
+              <p>
+                These services may process limited information according to
+                their own privacy policies and terms.
+              </p>
+
+              <ul>
+                <li>Formspree — used to process contact form submissions.</li>
+
+                <li>
+                  CDN providers — may deliver libraries, icons, fonts, or other
+                  website assets.
+                </li>
+
+                <li>
+                  Hosting providers — may process technical request information
+                  required to serve the website.
+                </li>
+              </ul>
+
+              <p style="margin-top: 18px">
+                Third-party services are selected based on their usefulness and
+                reliability, but their handling of information is governed by
+                their own policies.
+              </p>
+            </section>
+
+            <!-- ===================================================
+               07 — COOKIES
+               =================================================== -->
+
+            <section class="privacy-section reveal" id="cookies">
+              <div class="privacy-section-number">07</div>
+
+              <h2>Cookies and similar technologies</h2>
+
+              <p>
+                QRLY is designed to work without requiring an account or
+                unnecessary cookies for its core QR generation functionality.
+              </p>
+
+              <p>
+                However, third-party services integrated into the website may
+                use cookies or similar technologies for functionality, security,
+                analytics, or service delivery.
+              </p>
+
+              <p>
+                Your browser also provides controls that allow you to manage or
+                block cookies according to your preferences.
+              </p>
+            </section>
+
+            <!-- ===================================================
+               08 — SECURITY
+               =================================================== -->
+
+            <section class="privacy-section reveal" id="security">
+              <div class="privacy-section-number">08</div>
+
+              <h2>Data security</h2>
+
+              <p>
+                We take reasonable measures to protect information handled
+                through QRLY. However, no website, internet transmission, or
+                electronic storage system can be guaranteed to be completely
+                secure.
+              </p>
+
+              <p>
+                For this reason, avoid submitting confidential or highly
+                sensitive information through QRLY's contact form or encoding
+                such information into publicly accessible QR codes.
+              </p>
+            </section>
+
+            <!-- ===================================================
+               09 — YOUR CHOICES
+               =================================================== -->
+
+            <section class="privacy-section reveal" id="choices">
+              <div class="privacy-section-number">09</div>
+
+              <h2>Your choices</h2>
+
+              <p>
+                You have control over the information you choose to provide to
+                QRLY.
+              </p>
+
+              <ul>
+                <li>
+                  You can use the QR generator without creating an account.
+                </li>
+
+                <li>You can choose not to submit optional information.</li>
+
+                <li>You can control cookies through your browser settings.</li>
+
+                <li>
+                  You can contact us if you have questions about a message or
+                  information you submitted.
+                </li>
+              </ul>
+            </section>
+
+            <!-- ===================================================
+               10 — CHILDREN
+               =================================================== -->
+
+            <section class="privacy-section reveal" id="children">
+              <div class="privacy-section-number">10</div>
+
+              <h2>Children's privacy</h2>
+
+              <p>
+                QRLY is a general-purpose website and is not specifically
+                directed toward children. We do not knowingly request personal
+                information from children for the purpose of creating accounts
+                or profiles.
+              </p>
+
+              <p>
+                If you believe a child has submitted personal information to us
+                through the website, please contact us so that the situation can
+                be reviewed.
+              </p>
+            </section>
+
+            <!-- ===================================================
+               11 — POLICY UPDATES
+               =================================================== -->
+
+            <section class="privacy-section reveal" id="updates">
+              <div class="privacy-section-number">11</div>
+
+              <h2>Changes to this policy</h2>
+
+              <p>
+                We may update this Privacy Policy from time to time to reflect
+                changes to QRLY, our services, or applicable requirements.
+              </p>
+
+              <p>
+                When changes are made, the updated version will be published on
+                this page and the "Last updated" date will be revised.
+              </p>
+            </section>
+
+            <!-- ===================================================
+               CONTACT
+               =================================================== -->
+
+            <section class="privacy-contact reveal">
+              <h2>Still have a question?</h2>
+
+              <p>
+                If something about this policy is unclear, we'd rather you ask.
+                Send us a message and we'll do our best to clarify how QRLY
+                handles information.
+              </p>
+
+              <div class="privacy-contact-actions">
+                <a href="contact.html" class="btn btn-primary">
+                  Contact us
+                  <i class="fa-solid fa-arrow-right"></i>
+                </a>
+
+                <a href="generator.html" class="btn btn-secondary">
+                  Create a QR
+                  <i class="fa-solid fa-qrcode"></i>
+                </a>
+              </div>
+            </section>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <!-- =========================================================
+       FOOTER
+       ========================================================= -->
+
+    <footer class="site-footer">
+      <div class="container">
+        <div class="footer-main">
+          <div class="footer-brand">
+            <a href="index.html" class="brand">
+              <span class="brand-mark">
+                <span></span>
+                <span></span>
+                <span></span>
+              </span>
+
+              <span class="brand-name"> QRLY </span>
+            </a>
+
+            <p>Create. Customize. Connect.</p>
+
+            <span class="footer-location"> Built for the web · 2026 </span>
+          </div>
+
+          <div class="footer-links-group">
+            <div class="footer-column">
+              <h4>Product</h4>
+
+              <a href="generator.html"> Generator </a>
+
+              <a href="features.html"> Features </a>
+
+              <a href="about.html"> About </a>
+            </div>
+
+            <div class="footer-column">
+              <h4>Company</h4>
+
+              <a href="contact.html"> Contact </a>
+
+              <a href="privacy.html" class="active"> Privacy </a>
+
+              <a href="terms.html"> Terms </a>
+            </div>
+          </div>
+        </div>
+
+        <div class="footer-bottom">
+          <span> © 2026 QRLY. All rights reserved. </span>
+
+          <span> Crafted with precision. </span>
+        </div>
+      </div>
+    </footer>
+
+    <!-- =========================================================
+       PAGE JAVASCRIPT
+       ========================================================= -->
+
+    <script>
+      /* =========================================================
+       MOBILE NAVIGATION
+       ========================================================= */
+
+      const mobileMenuToggle = document.getElementById("mobileMenuToggle");
+
+      const navLinks = document.getElementById("navLinks");
+
+      if (mobileMenuToggle && navLinks) {
+        mobileMenuToggle.addEventListener("click", () => {
+          const isOpen = navLinks.classList.toggle("open");
+
+          mobileMenuToggle.setAttribute("aria-expanded", isOpen);
+
+          mobileMenuToggle.innerHTML = isOpen
+            ? '<i class="fa-solid fa-xmark"></i>'
+            : '<i class="fa-solid fa-bars"></i>';
+        });
+
+        document.querySelectorAll(".nav-links a").forEach((link) => {
+          link.addEventListener("click", () => {
+            navLinks.classList.remove("open");
+
+            mobileMenuToggle.setAttribute("aria-expanded", "false");
+
+            mobileMenuToggle.innerHTML = '<i class="fa-solid fa-bars"></i>';
+          });
+        });
+      }
+
+      /* =========================================================
+       SCROLL REVEAL
+       ========================================================= */
+
+      const revealElements = document.querySelectorAll(".reveal");
+
+      if ("IntersectionObserver" in window) {
+        const revealObserver = new IntersectionObserver(
+          (entries, observer) => {
+            entries.forEach((entry) => {
+              if (entry.isIntersecting) {
+                entry.target.classList.add("visible");
+
+                observer.unobserve(entry.target);
+              }
+            });
+          },
+          {
+            threshold: 0.12,
+          },
+        );
+
+        revealElements.forEach((element) => {
+          revealObserver.observe(element);
+        });
+      } else {
+        revealElements.forEach((element) => {
+          element.classList.add("visible");
+        });
+      }
+    </script>
+  </body>
+</html>

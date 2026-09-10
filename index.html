@@ -1,0 +1,624 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>QRLY — Create. Customize. Connect.</title>
+    <link rel="icon" type="image/svg+xml" href="./assets/qrly.svg">
+
+    <meta
+      name="description"
+      content="QRLY is a fast, modern QR code generator for creating beautiful, customizable QR codes in seconds."
+    />
+
+    <meta
+      name="keywords"
+      content="QR code generator, create QR code, custom QR code, QRLY"
+    />
+
+    <meta name="author" content="Ravi Thakur" />
+
+    <meta name="theme-color" content="#0b0d12" />
+
+    <!-- Favicon -->
+    <link rel="icon" href="assets/favicon.svg" type="image/svg+xml" />
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Icons -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    />
+
+    <!-- Master Stylesheet -->
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+
+  <body>
+    <!-- =========================
+         NAVBAR
+    ========================== -->
+
+    <header class="site-header">
+      <nav class="navbar container">
+        <a href="index.html" class="brand">
+          <span class="brand-mark">
+            <span></span>
+            <span></span>
+            <span></span>
+          </span>
+
+          <span class="brand-name">QRLY</span>
+        </a>
+
+        <button
+          class="mobile-menu-toggle"
+          id="mobileMenuToggle"
+          aria-label="Toggle navigation"
+          aria-expanded="false"
+        >
+          <i class="fa-solid fa-bars"></i>
+        </button>
+
+        <div class="nav-links" id="navLinks">
+          <a href="index.html" class="active">Home</a>
+
+          <a href="generator.html">Generator</a>
+
+          <a href="features.html">Features</a>
+
+          <a href="about.html">About</a>
+
+          <a href="contact.html">Contact</a>
+
+          <a href="generator.html" class="nav-cta">
+            Create QR
+            <i class="fa-solid fa-arrow-up-right-from-square"></i>
+          </a>
+        </div>
+      </nav>
+    </header>
+
+    <main>
+      <!-- =========================
+             HERO
+        ========================== -->
+
+      <section class="hero">
+        <div class="hero-glow hero-glow-one"></div>
+        <div class="hero-glow hero-glow-two"></div>
+
+        <div class="container hero-grid">
+          <div class="hero-content reveal">
+            <div class="eyebrow">
+              <span class="eyebrow-dot"></span>
+              Simple. Fast. Beautiful.
+            </div>
+
+            <h1>
+              QR codes,
+              <span>done better.</span>
+            </h1>
+
+            <p class="hero-description">
+              Create professional QR codes in seconds. Customize every detail,
+              download instantly, and connect your audience to what matters.
+            </p>
+
+            <div class="hero-actions">
+              <a href="generator.html" class="btn btn-primary">
+                Create a QR Code
+                <i class="fa-solid fa-arrow-right"></i>
+              </a>
+
+              <a href="#features" class="btn btn-secondary">
+                Explore features
+              </a>
+            </div>
+
+            <div class="hero-trust">
+              <div class="trust-item">
+                <i class="fa-solid fa-bolt"></i>
+                Instant generation
+              </div>
+
+              <div class="trust-item">
+                <i class="fa-solid fa-lock"></i>
+                Privacy friendly
+              </div>
+
+              <div class="trust-item">
+                <i class="fa-solid fa-download"></i>
+                Easy downloads
+              </div>
+            </div>
+          </div>
+
+          <!-- QR VISUAL -->
+
+          <div class="hero-visual reveal">
+            <div class="qr-orbit orbit-one"></div>
+            <div class="qr-orbit orbit-two"></div>
+
+            <div class="qr-card">
+              <div class="qr-card-top">
+                <div>
+                  <span class="mini-label">LIVE PREVIEW</span>
+                  <h3>Your QR code</h3>
+                </div>
+
+                <div class="status-dot">
+                  <span></span>
+                </div>
+              </div>
+
+              <div class="qr-display">
+                <div class="fake-qr">
+                  <div class="qr-corner corner-tl"></div>
+                  <div class="qr-corner corner-tr"></div>
+                  <div class="qr-corner corner-bl"></div>
+
+                  <div class="qr-pattern">
+                    <span></span><span></span><span></span> <span></span
+                    ><span></span><span></span> <span></span><span></span
+                    ><span></span> <span></span><span></span><span></span>
+                    <span></span><span></span><span></span> <span></span
+                    ><span></span><span></span> <span></span><span></span
+                    ><span></span> <span></span><span></span><span></span>
+                    <span></span><span></span><span></span>
+                  </div>
+
+                  <div class="qr-logo">
+                    <span>Q</span>
+                  </div>
+                </div>
+              </div>
+
+              <div class="qr-card-bottom">
+                <div class="qr-url">
+                  <span>URL</span>
+                  <strong>qrly.app</strong>
+                </div>
+
+                <div class="qr-action">
+                  <i class="fa-solid fa-arrow-down"></i>
+                </div>
+              </div>
+            </div>
+
+            <div class="floating-chip chip-one">
+              <i class="fa-solid fa-link"></i>
+              URL
+            </div>
+
+            <div class="floating-chip chip-two">
+              <i class="fa-solid fa-wifi"></i>
+              Wi-Fi
+            </div>
+
+            <div class="floating-chip chip-three">
+              <i class="fa-solid fa-user"></i>
+              vCard
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- =========================
+             LOGO / STATS STRIP
+        ========================== -->
+
+      <section class="trust-strip">
+        <div class="container trust-strip-inner">
+          <span>BUILT FOR EVERYDAY CONNECTIONS</span>
+
+          <div class="trust-line"></div>
+
+          <strong>
+            URL
+            <span>·</span>
+            TEXT
+            <span>·</span>
+            EMAIL
+            <span>·</span>
+            WIFI
+            <span>·</span>
+            PHONE
+            <span>·</span>
+            VCARD
+          </strong>
+        </div>
+      </section>
+
+      <!-- =========================
+             FEATURES
+        ========================== -->
+
+      <section class="section features-section" id="features">
+        <div class="container">
+          <div class="section-heading reveal">
+            <div class="section-number">01 / FEATURES</div>
+
+            <h2>
+              Everything you need.
+              <span>Nothing you don't.</span>
+            </h2>
+
+            <p>
+              QRLY keeps QR creation simple while giving you enough control to
+              make every code feel like yours.
+            </p>
+          </div>
+
+          <div class="features-grid">
+            <article class="feature-card feature-large reveal">
+              <div class="feature-icon">
+                <i class="fa-solid fa-wand-magic-sparkles"></i>
+              </div>
+
+              <div class="feature-content">
+                <span class="feature-label">CUSTOMIZATION</span>
+
+                <h3>Make it yours.</h3>
+
+                <p>
+                  Choose your colors, add your logo, adjust your QR size, and
+                  create a code that fits your brand.
+                </p>
+              </div>
+
+              <div class="feature-decoration">
+                <div></div>
+                <div></div>
+                <div></div>
+              </div>
+            </article>
+
+            <article class="feature-card reveal">
+              <div class="feature-icon">
+                <i class="fa-solid fa-bolt"></i>
+              </div>
+
+              <span class="feature-label">SPEED</span>
+
+              <h3>Generate instantly.</h3>
+
+              <p>
+                No complicated setup. Enter your content and see your QR code
+                appear instantly.
+              </p>
+            </article>
+
+            <article class="feature-card reveal">
+              <div class="feature-icon">
+                <i class="fa-solid fa-file-arrow-down"></i>
+              </div>
+
+              <span class="feature-label">EXPORT</span>
+
+              <h3>Download your way.</h3>
+
+              <p>
+                Export your finished QR code as PNG or SVG and use it wherever
+                you need.
+              </p>
+            </article>
+
+            <article class="feature-card reveal">
+              <div class="feature-icon">
+                <i class="fa-solid fa-shield-halved"></i>
+              </div>
+
+              <span class="feature-label">PRIVACY</span>
+
+              <h3>Your data stays yours.</h3>
+
+              <p>
+                QRLY is designed around client-side generation, keeping your
+                content private whenever possible.
+              </p>
+            </article>
+
+            <article class="feature-card reveal">
+              <div class="feature-icon">
+                <i class="fa-solid fa-layer-group"></i>
+              </div>
+
+              <span class="feature-label">FORMATS</span>
+
+              <h3>More than just links.</h3>
+
+              <p>
+                Create QR codes for websites, text, email, phone numbers, Wi-Fi
+                networks, and contacts.
+              </p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- =========================
+             HOW IT WORKS
+        ========================== -->
+
+      <section class="section process-section">
+        <div class="container">
+          <div class="process-layout">
+            <div class="section-heading process-heading reveal">
+              <div class="section-number">02 / HOW IT WORKS</div>
+
+              <h2>
+                Three steps.
+                <span>That's it.</span>
+              </h2>
+
+              <p>
+                QR creation shouldn't require a tutorial. QRLY keeps the entire
+                process straightforward.
+              </p>
+
+              <a href="generator.html" class="text-link">
+                Try the generator
+                <i class="fa-solid fa-arrow-right"></i>
+              </a>
+            </div>
+
+            <div class="steps">
+              <div class="step reveal">
+                <div class="step-number">01</div>
+
+                <div class="step-content">
+                  <h3>Choose your type</h3>
+
+                  <p>
+                    Pick what you want your QR code to contain — URL, text,
+                    email, Wi-Fi, contact and more.
+                  </p>
+                </div>
+              </div>
+
+              <div class="step reveal">
+                <div class="step-number">02</div>
+
+                <div class="step-content">
+                  <h3>Customize it</h3>
+
+                  <p>
+                    Adjust colors, size, logo and other visual settings to match
+                    your needs.
+                  </p>
+                </div>
+              </div>
+
+              <div class="step reveal">
+                <div class="step-number">03</div>
+
+                <div class="step-content">
+                  <h3>Download & connect</h3>
+
+                  <p>
+                    Download your finished QR code and put it wherever your
+                    audience needs to scan it.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- =========================
+             USE CASES
+        ========================== -->
+
+      <section class="section use-cases-section">
+        <div class="container">
+          <div class="section-heading centered reveal">
+            <div class="section-number">03 / USE CASES</div>
+
+            <h2>
+              One QR code.
+              <span>Endless possibilities.</span>
+            </h2>
+
+            <p>
+              From your next business card to your restaurant menu, QRLY fits
+              wherever a simple connection matters.
+            </p>
+          </div>
+
+          <div class="use-cases-grid">
+            <div class="use-case reveal">
+              <div class="use-case-icon">
+                <i class="fa-solid fa-store"></i>
+              </div>
+              <h3>Businesses</h3>
+              <p>Menus, websites, reviews & promotions.</p>
+            </div>
+
+            <div class="use-case reveal">
+              <div class="use-case-icon">
+                <i class="fa-solid fa-id-card"></i>
+              </div>
+              <h3>Professionals</h3>
+              <p>Share contact details and portfolios.</p>
+            </div>
+
+            <div class="use-case reveal">
+              <div class="use-case-icon">
+                <i class="fa-solid fa-calendar-days"></i>
+              </div>
+              <h3>Events</h3>
+              <p>Tickets, invitations and event information.</p>
+            </div>
+
+            <div class="use-case reveal">
+              <div class="use-case-icon">
+                <i class="fa-solid fa-wifi"></i>
+              </div>
+              <h3>Everyday life</h3>
+              <p>Share Wi-Fi without typing long passwords.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- =========================
+             CTA
+        ========================== -->
+
+      <section class="cta-section">
+        <div class="container">
+          <div class="cta-card reveal">
+            <div class="cta-glow"></div>
+
+            <div class="cta-content">
+              <div class="eyebrow">
+                <span class="eyebrow-dot"></span>
+                Ready when you are
+              </div>
+
+              <h2>
+                Turn a scan into
+                <span>a connection.</span>
+              </h2>
+
+              <p>
+                Create your first QR code with QRLY. No account. No unnecessary
+                complexity.
+              </p>
+
+              <a href="generator.html" class="btn btn-light">
+                Start creating
+                <i class="fa-solid fa-arrow-right"></i>
+              </a>
+            </div>
+
+            <div class="cta-pattern">
+              <div class="pattern-square"></div>
+              <div class="pattern-square"></div>
+              <div class="pattern-square"></div>
+              <div class="pattern-square"></div>
+              <div class="pattern-square"></div>
+              <div class="pattern-square"></div>
+              <div class="pattern-square"></div>
+              <div class="pattern-square"></div>
+              <div class="pattern-square"></div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- =========================
+         FOOTER
+    ========================== -->
+
+    <footer class="site-footer">
+      <div class="container">
+        <div class="footer-main">
+          <div class="footer-brand">
+            <a href="index.html" class="brand">
+              <span class="brand-mark">
+                <span></span>
+                <span></span>
+                <span></span>
+              </span>
+
+              <span class="brand-name">QRLY</span>
+            </a>
+
+            <p>Create. Customize. Connect.</p>
+
+            <span class="footer-location"> Built for the web · 2026 </span>
+          </div>
+
+          <div class="footer-links-group">
+            <div class="footer-column">
+              <h4>Product</h4>
+
+              <a href="generator.html">Generator</a>
+              <a href="features.html">Features</a>
+              <a href="about.html">About</a>
+            </div>
+
+            <div class="footer-column">
+              <h4>Company</h4>
+
+              <a href="contact.html">Contact</a>
+              <a href="privacy.html">Privacy</a>
+              <a href="terms.html">Terms</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="footer-bottom">
+          <span> © 2026 QRLY. All rights reserved. </span>
+
+          <span> Crafted with precision. </span>
+        </div>
+      </div>
+    </footer>
+
+    <!-- =========================
+         MOBILE NAV + REVEAL
+    ========================== -->
+
+    <script>
+      const mobileMenuToggle = document.getElementById("mobileMenuToggle");
+
+      const navLinks = document.getElementById("navLinks");
+
+      mobileMenuToggle.addEventListener("click", () => {
+        const isOpen = navLinks.classList.toggle("open");
+
+        mobileMenuToggle.setAttribute("aria-expanded", isOpen);
+
+        mobileMenuToggle.innerHTML = isOpen
+          ? '<i class="fa-solid fa-xmark"></i>'
+          : '<i class="fa-solid fa-bars"></i>';
+      });
+
+      document.querySelectorAll(".nav-links a").forEach((link) => {
+        link.addEventListener("click", () => {
+          navLinks.classList.remove("open");
+
+          mobileMenuToggle.setAttribute("aria-expanded", "false");
+
+          mobileMenuToggle.innerHTML = '<i class="fa-solid fa-bars"></i>';
+        });
+      });
+
+      const revealElements = document.querySelectorAll(".reveal");
+
+      const revealObserver = new IntersectionObserver(
+        (entries, observer) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+              entry.target.classList.add("visible");
+
+              observer.unobserve(entry.target);
+            }
+          });
+        },
+        {
+          threshold: 0.12,
+        },
+      );
+
+      revealElements.forEach((element) => {
+        revealObserver.observe(element);
+      });
+    </script>
+  </body>
+</html>
